@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+</head>
+
+	<!-- Required Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index, follow">
+	<title><?php echo isset($title) ? $title : $company['meta_keyword'] ?></title>
+	<meta name="keywords" content="<?php echo isset($meta_keyword) ? $meta_keyword : $company['meta_keyword'] ?>">
+	<meta name="description" content="<?php echo isset($meta_description) ? $meta_description : $company['meta_description'] ?>">
+	<meta property="og:type" content="<?php echo isset($meta_og['type']) ? $meta_og['type'] : 'article' ?>">
+	<meta property="og:title" content="<?php echo isset($meta_og['title']) ? $meta_og['title'] : $company['meta_keyword'] ?>">
+	<meta property="og:description" content="<?php echo isset($meta_og['description']) ? $meta_og['description'] : $company['meta_description'] ?>">
+	<meta property="og:image" content="<?php echo isset($meta_og['image']) ? $meta_og['image'] : base_url() . 'assets/listee/img/compact_logo.png' ?>">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="<?php echo base_url() ?>assets/smarttech/images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="<?php echo base_url() ?>assets/smarttech/images/favicon.ico" type="image/x-icon">
+
+	<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/smarttech/rs-plugin/css/settings.css" media="screen" />
+
+	<!-- StyleSheets -->
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/ionicons.min.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/font-awesome.min.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/main.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/style.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/responsive.css">
+
+	<!-- Google Analytics -->
+	<?php echo $company['google_analytics'] ?>
+
+</head>
+
+<body>
+
+	<div class="main-wrapper">
+		<!-- <?php $this->load->view('header') ?> -->
+
+		<?php
+		if (isset($is_show_slide) && $is_show_slide == true) {
+			// $this->load->view('slide');
+		}
+		?>
+
+		<!-- <?php $this->load->view($subview) ?> -->
+
+		<!-- <?php $this->load->view('footer') ?> -->
+	</div>
+
+	<!-- scrollToTop start -->
+	<div class="progress-wrap active-progress" style="display: none !important;">
+		<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+			<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+				style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919px, 307.919px; stroke-dashoffset: 228.265px;">
+			</path>
+		</svg>
+	</div>
+	<!-- scrollToTop end -->
+
+	<!-- Call Now -->
+	<a class="" style="display: block;" href="tel:<?php echo str_replace(' ', '', str_replace('-', '', str_replace('.', '', $company['hotline']))) ?>">
+		<div class="phone-call">
+			<img src="<?php echo base_url() ?>assets/listee/img/call-now-200.png" width="32" alt="Call Now" title="Call Now">
+		</div>
+	</a>
+
+	<!-- Zalo Chat -->
+	<div class="zalo-chat">
+		<a href="https://zalo.me/<?php echo str_replace(' ', '', str_replace('-', '', str_replace('.', '', $company['zalo_chat']))) ?>" target="_blank"><img src="<?php echo base_url() ?>assets/listee/img/zalo_icon.png" width="55" alt="zalo_icon"></a>
+	</div>
+
+	<!-- Facebook Chat -->
+	<?php echo $company['facebook_chat'] ?>
+
+	<!-- Footer Setting -->
+	<?php echo $company['footer_setting'] ?>
+
+<!-- JavaScripts --> 
+<script src="<?php echo base_url() ?>assets/smarttech/js/vendors/jquery/jquery.min.js"></script> 
+<script src="<?php echo base_url() ?>assets/smarttech/js/vendors/wow.min.js"></script> 
+<script src="<?php echo base_url() ?>assets/smarttech/js/vendors/bootstrap.min.js"></script> 
+<script src="<?php echo base_url() ?>assets/smarttech/js/vendors/own-menu.js"></script> 
+<script src="<?php echo base_url() ?>assets/smarttech/js/vendors/jquery.sticky.js"></script> 
+<script src="<?php echo base_url() ?>assets/smarttech/js/vendors/owl.carousel.min.js"></script> 
+
+<!-- SLIDER REVOLUTION 4.x SCRIPTS  --> 
+<script type="text/javascript" src="<?php echo base_url() ?>assets/smarttech/rs-plugin/js/jquery.tp.t.min.js"></script> 
+<script type="text/javascript" src="<?php echo base_url() ?>assets/smarttech/rs-plugin/js/jquery.tp.min.js"></script> 
+<script src="<?php echo base_url() ?>assets/smarttech/js/main.js"></script> 
+
+</body>
+
+</html>

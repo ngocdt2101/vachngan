@@ -1,0 +1,40 @@
+/**
+ *
+ * Apply Here your Custom CSS
+ *
+*/
+
+body {
+	
+}
+
+#main-table input[type="checkbox"] {
+	width: 16px;
+	height: 16px;
+}
+
+@media (max-width: 767px) {
+	.table-wrapper {
+		width: 100%;
+		overflow: scroll;
+	}
+
+	.table-wrapper>.dataTables_wrapper {
+		width: max-content;
+	}
+}
+
+.control-label {
+	text-align: left !important;
+	max-width: 130px;
+}
+
+label.error {
+	font-weight: normal;
+	color: red;
+	padding-left: 5px;
+}
+
+.form-control.error {
+	border: solid 1px red;
+}
