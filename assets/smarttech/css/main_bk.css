@@ -3689,7 +3689,7 @@ header.header-style-4 .search-cate .bootstrap-select {
 	display: inline-block;
 	min-width: 175px;
 	margin-top: 5px;
-	float: right;
+	float: left;
 }
 .header-style-4 .go-right .call-mun i {
 	float: left;

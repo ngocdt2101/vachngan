@@ -92,7 +92,7 @@ defined('BANNER_UPLOAD_PATH') OR define('BANNER_UPLOAD_PATH', 'upload/banner/');
 defined('POST_UPLOAD_PATH') OR define('POST_UPLOAD_PATH', 'upload/post/');
 
 defined('SLIDE_IMAGE_WIDTH') OR define('SLIDE_IMAGE_WIDTH', 1920);
-defined('SLIDE_IMAGE_HEIGHT') OR define('SLIDE_IMAGE_HEIGHT', 600);
+defined('SLIDE_IMAGE_HEIGHT') OR define('SLIDE_IMAGE_HEIGHT', 500);
 
 defined('PRODUCT_IMAGE_WIDTH') OR define('PRODUCT_IMAGE_WIDTH', 312);
 defined('PRODUCT_IMAGE_HEIGHT') OR define('PRODUCT_IMAGE_HEIGHT', 252);

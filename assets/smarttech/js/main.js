@@ -146,7 +146,7 @@ jQuery('.tp-banner-full').show().revolution({
 	startheight:500,
 	navigationType:"bullet",
 	navigationArrows:"solo",
-	navigationStyle:"preview4",
+	navigationStyle:"preview5",
 	parallax:"mouse",
 	parallaxBgFreeze:"on",
 	parallaxLevels:[7,4,3,2,5,4,3,2,1,0],												
@@ -317,6 +317,17 @@ $(".item-slide-2").owlCarousel({
 /*-----------------------------------------------------------------------------------*/
 /* 	CASE SLIDER
 /*-----------------------------------------------------------------------------------*/
+var $blogSlide = $("#blog-slide");
+if ($blogSlide.length && $blogSlide.find('> .owl-row-item').length === 0) {
+	var blogRows = 2;
+	var $blogItems = $blogSlide.children();
+	for (var i = 0; i < $blogItems.length; i += blogRows) {
+		var $group = $('<div class="owl-row-item"></div>');
+		$blogItems.slice(i, i + blogRows).appendTo($group);
+		$blogSlide.append($group);
+	}
+}
+
 $("#blog-slide").owlCarousel({ 
     items : 3,
 	autoplay:true,
