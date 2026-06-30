@@ -58,7 +58,6 @@ body {
 #wrap {
 	position: relative;
 	width: 100%;
-	overflow: hidden;
 }
 
 /*=======================================================
@@ -232,7 +231,7 @@ section {
 
 .heading hr:before {
 	height: 2px;
-	background: #0088cc;
+	background: #F00000;
 	content: "";
 	position: absolute;
 	top: -1px;
@@ -580,10 +579,14 @@ section {
 
 .big-nsv .nav li a {
 	font-size: 15px;
-	padding-top: 25px;
 	font-weight: bold;
 	border-right: 1px solid #eeeeee;
-	min-height: 127px;
+	min-height: 80px;
+	outline: none;
+}
+
+.big-nsv .nav li a:hover{
+	color: #f00;
 }
 
 .big-nsv .nav li:nth-last-child(1) a {
@@ -870,9 +873,9 @@ section {
 }
 
 .with-nav .owl-nav div:hover {
-	background: #0088cc;
+	background: #f00;
 	color: #fff;
-	border: 1px solid #0088cc;
+	border: 1px solid #f00;
 }
 
 .with-nav.middle-nav .owl-nav .owl-prev {
@@ -1621,7 +1624,7 @@ display: flex;
 }
 
 .blog-post a {
-	color: #0088cc;
+	color: #F00000;
 }
 
 .blog-post a.tittle {
