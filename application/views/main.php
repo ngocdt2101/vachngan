@@ -3,43 +3,44 @@
 
 </head>
 
-	<!-- Required Meta Tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="robots" content="index, follow">
-	<title><?php echo isset($title) ? $title : $company['meta_keyword'] ?></title>
-	<meta name="keywords" content="<?php echo isset($meta_keyword) ? $meta_keyword : $company['meta_keyword'] ?>">
-	<meta name="description" content="<?php echo isset($meta_description) ? $meta_description : $company['meta_description'] ?>">
-	<meta property="og:type" content="<?php echo isset($meta_og['type']) ? $meta_og['type'] : 'article' ?>">
-	<meta property="og:title" content="<?php echo isset($meta_og['title']) ? $meta_og['title'] : $company['meta_keyword'] ?>">
-	<meta property="og:description" content="<?php echo isset($meta_og['description']) ? $meta_og['description'] : $company['meta_description'] ?>">
-	<meta property="og:image" content="<?php echo isset($meta_og['image']) ? $meta_og['image'] : base_url() . 'assets/listee/img/compact_logo.png' ?>">
+<!-- Required Meta Tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="index, follow">
+<title><?php echo isset($title) ? $title : $company['meta_keyword'] ?></title>
+<meta name="keywords" content="<?php echo isset($meta_keyword) ? $meta_keyword : $company['meta_keyword'] ?>">
+<meta name="description" content="<?php echo isset($meta_description) ? $meta_description : $company['meta_description'] ?>">
+<meta property="og:type" content="<?php echo isset($meta_og['type']) ? $meta_og['type'] : 'article' ?>">
+<meta property="og:title" content="<?php echo isset($meta_og['title']) ? $meta_og['title'] : $company['meta_keyword'] ?>">
+<meta property="og:description" content="<?php echo isset($meta_og['description']) ? $meta_og['description'] : $company['meta_description'] ?>">
+<meta property="og:image" content="<?php echo isset($meta_og['image']) ? $meta_og['image'] : base_url() . 'assets/listee/img/compact_logo.png' ?>">
 
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="<?php echo base_url() ?>assets/smarttech/images/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="<?php echo base_url() ?>assets/smarttech/images/favicon.ico" type="image/x-icon">
+<!-- Favicon -->
+<link rel="shortcut icon" href="<?php echo base_url() ?>assets/smarttech/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="<?php echo base_url() ?>assets/smarttech/images/favicon.ico" type="image/x-icon">
 
-	<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/smarttech/rs-plugin/css/settings.css" media="screen" />
+<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/smarttech/rs-plugin/css/settings.css" media="screen" />
 
-	<!-- StyleSheets -->
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/ionicons.min.css">
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/bootstrap.min.css">
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/font-awesome.min.css">
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/main.css">
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/style.css">
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/responsive.css">
+<!-- StyleSheets -->
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/ionicons.min.css">
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/bootstrap.min.css">
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/font-awesome.min.css">
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/main.css">
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/style.css">
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/responsive.css">
 
-	<!-- Google Analytics -->
-	<?php echo $company['google_analytics'] ?>
+<!-- Google Analytics -->
+<?php echo $company['google_analytics'] ?>
 
 </head>
 
 <body>
 
 	<div class="main-wrapper">
-		<?php // $this->load->view('header') ?>
+		<?php // $this->load->view('header') 
+		?>
 
 		<?php
 		if (isset($is_show_slide) && $is_show_slide == true) {
@@ -47,9 +48,9 @@
 		}
 		?>
 
-		<!-- <?php $this->load->view($subview) ?> -->
+		<?php $this->load->view($subview) ?>
 
-		<!-- <?php $this->load->view('footer') ?> -->
+		<?php $this->load->view('footer') ?> 
 	</div>
 
 	<!-- scrollToTop start -->
@@ -80,18 +81,22 @@
 	<!-- Footer Setting -->
 	<?php echo $company['footer_setting'] ?>
 
-<!-- JavaScripts --> 
-<script src="<?php echo base_url() ?>assets/smarttech/js/vendors/jquery/jquery.min.js"></script> 
-<script src="<?php echo base_url() ?>assets/smarttech/js/vendors/wow.min.js"></script> 
-<script src="<?php echo base_url() ?>assets/smarttech/js/vendors/bootstrap.min.js"></script> 
-<script src="<?php echo base_url() ?>assets/smarttech/js/vendors/own-menu.js"></script> 
-<script src="<?php echo base_url() ?>assets/smarttech/js/vendors/jquery.sticky.js"></script> 
-<script src="<?php echo base_url() ?>assets/smarttech/js/vendors/owl.carousel.min.js"></script> 
+	<!-- GO TO TOP  -->
+	<a href="#" class="cd-top"><i class="fa fa-angle-up"></i></a>
+	<!-- GO TO TOP End -->
 
-<!-- SLIDER REVOLUTION 4.x SCRIPTS  --> 
-<script type="text/javascript" src="<?php echo base_url() ?>assets/smarttech/rs-plugin/js/jquery.tp.t.min.js"></script> 
-<script type="text/javascript" src="<?php echo base_url() ?>assets/smarttech/rs-plugin/js/jquery.tp.min.js"></script> 
-<script src="<?php echo base_url() ?>assets/smarttech/js/main.js"></script> 
+	<!-- JavaScripts -->
+	<script src="<?php echo base_url() ?>assets/smarttech/js/vendors/jquery/jquery.min.js"></script>
+	<script src="<?php echo base_url() ?>assets/smarttech/js/vendors/wow.min.js"></script>
+	<script src="<?php echo base_url() ?>assets/smarttech/js/vendors/bootstrap.min.js"></script>
+	<script src="<?php echo base_url() ?>assets/smarttech/js/vendors/own-menu.js"></script>
+	<script src="<?php echo base_url() ?>assets/smarttech/js/vendors/jquery.sticky.js"></script>
+	<script src="<?php echo base_url() ?>assets/smarttech/js/vendors/owl.carousel.min.js"></script>
+
+	<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+	<script type="text/javascript" src="<?php echo base_url() ?>assets/smarttech/rs-plugin/js/jquery.tp.t.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url() ?>assets/smarttech/rs-plugin/js/jquery.tp.min.js"></script>
+	<script src="<?php echo base_url() ?>assets/smarttech/js/main.js"></script>
 
 </body>
 

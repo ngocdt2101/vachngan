@@ -317,40 +317,93 @@ $(".item-slide-2").owlCarousel({
 /*-----------------------------------------------------------------------------------*/
 /* 	CASE SLIDER
 /*-----------------------------------------------------------------------------------*/
-var $blogSlide = $("#blog-slide");
-if ($blogSlide.length && $blogSlide.find('> .owl-row-item').length === 0) {
-	var blogRows = 2;
-	var $blogItems = $blogSlide.children();
+function prepareBlogRows($slider, rowsPerItem, minItemsForMultiRow) {
+	if (!$slider.length || $slider.find('> .owl-row-item').length) {
+		return;
+	}
+
+	var $blogItems = $slider.children();
+	var blogRows = rowsPerItem || 2;
+	if (blogRows > 1 && minItemsForMultiRow && $blogItems.length < minItemsForMultiRow) {
+		blogRows = 1;
+	}
+
 	for (var i = 0; i < $blogItems.length; i += blogRows) {
 		var $group = $('<div class="owl-row-item"></div>');
 		$blogItems.slice(i, i + blogRows).appendTo($group);
-		$blogSlide.append($group);
+		$slider.append($group);
 	}
 }
 
-$("#blog-slide").owlCarousel({ 
-    items : 3,
-	autoplay:true,
-	loop:false,
-	margin: 30,
-	autoplayTimeout:5000,
-	autoplayHoverPause:true,
-	navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-	lazyLoad:true,
-	nav: true,
-	responsive:{
-        0:{
-            items:1,
-        },
-        600:{
-            items:2,
-        },
-		1000:{
-            items:3,
-        },
-    },
-	animateOut: 'fadeOut'		
-});
+function equalizeBlogPostHeights($slider) {
+	if (!$slider.length) {
+		return;
+	}
+
+	var $posts = $slider.find('.blog-post');
+	if (!$posts.length) {
+		return;
+	}
+
+	$posts.css('height', 'auto');
+
+	var maxHeight = 0;
+	$posts.each(function () {
+		maxHeight = Math.max(maxHeight, $(this).outerHeight());
+	});
+
+	$posts.css('height', maxHeight + 'px');
+}
+
+function initBlogSlider(selector, rowsPerItem, minItemsForMultiRow) {
+	var $slider = $(selector);
+	if (!$slider.length) {
+		return;
+	}
+
+	prepareBlogRows($slider, rowsPerItem, minItemsForMultiRow);
+
+	$slider.owlCarousel({
+		items: 3,
+		autoplay: true,
+		loop: false,
+		margin: 30,
+		autoplayTimeout: 5000,
+		autoplayHoverPause: true,
+		navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+		lazyLoad: true,
+		nav: true,
+		responsive: {
+			0: {
+				items: 1,
+			},
+			600: {
+				items: 2,
+			},
+			1000: {
+				items: 3,
+			},
+		},
+		animateOut: 'fadeOut'
+	});
+
+	$(window).on('load resize', function () {
+		equalizeBlogPostHeights($slider);
+	});
+
+	$slider.on('initialized.owl.carousel refreshed.owl.carousel translated.owl.carousel resized.owl.carousel', function () {
+		equalizeBlogPostHeights($slider);
+	});
+
+	$slider.find('img').on('load', function () {
+		equalizeBlogPostHeights($slider);
+	});
+}
+
+initBlogSlider('#blog-slide', 2, 4);
+initBlogSlider('#blog-slide-a', 2, 4);
+initBlogSlider('#blog-slide-b', 2, 4);
+initBlogSlider('#blog-slide-news', 1);
 /*-----------------------------------------------------------------------------------*/
 /* 	CASE SLIDER
 /*-----------------------------------------------------------------------------------*/
