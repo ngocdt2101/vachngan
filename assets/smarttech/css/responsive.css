@@ -561,6 +561,16 @@ header .navbar {
 	min-height: 0px;
 	width: 100%;
 }
+
+header .call-mun {
+	display: none;
+}
+
+header .container {
+	display: flex;
+	flex-direction: column;
+}
+
 .navbar-toggle {
 	position: absolute;
 	top: 6px;
