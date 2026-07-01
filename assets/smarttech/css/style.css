@@ -1534,6 +1534,17 @@ display: flex;
 	margin-right: 10px;
 }
 
+.post-content span {
+	color: unset;
+	font-size: unset;
+}
+
+.post-content p {
+	color: unset;
+	font-size: unset;
+}
+
+
 .blog-post .read-more{
 	border: 1px solid #f00;
     padding: 3px 5px;
@@ -1548,6 +1559,8 @@ display: flex;
 
 .blog-post img {
 	margin-bottom: 10px;
+	max-width: 100% !important;
+    height: auto !important;
 }
 
 .blog-post a.tittle-img {
@@ -2822,9 +2835,10 @@ display: flex;
 }
 
 .blog-single h5 {
-	margin-bottom: 20px;
-	font-weight: 500;
-	font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 32px;
+    margin-top: 30px;
 }
 
 .blog-single h6 {
@@ -3191,7 +3205,7 @@ display: flex;
 	position: absolute;
 	right: 0px;
 	color: #fff;
-	background: #0088cc;
+	background: #c70909;
 	border: none;
 	width: 40px;
 	top: 0px;
@@ -3225,7 +3239,7 @@ display: flex;
 
 .sidebar .latest-post-small .media-body a:hover {
 	text-decoration: underline !important;
-	color: #5494e1;
+	color: #c70909;
 }
 
 .sidebar .latest-post-small .media-body span {
@@ -3240,7 +3254,7 @@ display: flex;
 }
 
 .categ li a:hover {
-	color: #69a1e4;
+	color: #c70909;
 }
 
 .categ li a:before {
@@ -3297,10 +3311,10 @@ display: flex;
 			Shop Side Bar
 ========================================================*/
 .shop-side-bar h6 {
-	font-size: 16px;
-	color: #222222;
-	font-weight: bold;
-	margin-top: 0px;
+    font-size: 20px;
+    color: #000000;
+    font-weight: 500;
+    margin-top: 0px;
 }
 
 .shop-side-bar ul {
@@ -3358,6 +3372,7 @@ display: flex;
 .shop-side-bar li {
 	list-style: none;
 	line-height: 30px;
+	font-size: 16px;
 }
 
 .shop-side-bar .checkbox label::before {
@@ -3402,7 +3417,6 @@ display: flex;
 	font-size: 12px;
 	margin-right: 5px;
 	padding-right: 5px;
-	border-right: 1px solid #ececec;
 	color: #999999;
 }
 
@@ -3427,11 +3441,11 @@ display: flex;
 }
 
 .recent-post .media-body a {
-	font-weight: 600;
-	font-size: 14px;
-	line-height: 18px;
-	width: 100%;
-	display: inline-block;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    width: 100%;
+    display: inline-block;
 }
 
 /*=======================================================
