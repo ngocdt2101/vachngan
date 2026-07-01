@@ -862,7 +862,7 @@ section {
 .featur-tabs .nav-tabs>li.active a {
 	background: #0088cc;
 	color: #fff;
-	font-weight: bold;
+    font-weight: 500;
 }
 
 .with-nav .owl-nav {
