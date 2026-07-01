@@ -591,6 +591,7 @@ section {
 	border-right: 1px solid #eeeeee;
 	min-height: 80px;
 	outline: none;
+	padding: 20px 10px;
 }
 
 .big-nsv .nav li a:hover{

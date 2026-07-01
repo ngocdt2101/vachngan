@@ -39,13 +39,13 @@
 								<div class="mega-inside scrn">
 									<ul class="home-links">
 										<li>
-											<a href="<?php echo base_url() .'danh-muc-bao-gia/bao-gia-tam-compact' ?>"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-1.jpg" alt=""> <span>Báo giá tấm Compact</span></a>
+											<a href="<?php echo base_url() .'danh-muc-bao-gia/bao-gia-tam-compact' ?>"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/menu-tc.jpg" alt=""> <span>Báo giá tấm Compact</span></a>
 										</li>
 										<li>
-											<a href="<?php echo base_url() .'danh-muc-bao-gia/bao-gia-vach-ngan-ve-sinh' ?>"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-2.jpg" alt=""> <span>Báo giá vách ngăn vệ sinh</span></a>
+											<a href="<?php echo base_url() .'danh-muc-bao-gia/bao-gia-vach-ngan-ve-sinh' ?>"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/menu-vs.jpg" alt=""> <span>Báo giá vách ngăn vệ sinh</span></a>
 										</li>
 										<li>
-											<a href="<?php echo base_url() .'danh-muc-bao-gia/bao-gia-vach-ngan-di-dong' ?>"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-2.jpg" alt=""> <span>Báo giá vách ngăn di động</span></a>
+											<a href="<?php echo base_url() .'danh-muc-bao-gia/bao-gia-vach-ngan-di-dong' ?>"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/menu-dt.jpg" alt=""> <span>Báo giá vách ngăn di động</span></a>
 										</li>
 									</ul>
 								</div>
