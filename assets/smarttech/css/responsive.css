@@ -869,6 +869,16 @@ header .col-xs-5.seri {
 .big-nsv .nav li {
 	width: 50%;
 }
+
+.big-nsv .container ul li:first-child {
+	display: none;
+}
+
+.big-nsv .container ul li a {
+	border: none;
+	box-shadow: inset 0 -1px 0 rgba(255,255,255,0.2);
+}
+
 .layout-8 .navbar-toggle {
 	position: relative;
 	top: 0px;
