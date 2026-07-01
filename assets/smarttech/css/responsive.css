@@ -1076,6 +1076,11 @@ header .col-xs-5.seri {
 	width: 33.3333% !important;
 	min-height: 151px;
 }
+.list-blogs {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px 15px;
+}
 }
 @media (max-width:640px) {
 header .search-cate input {

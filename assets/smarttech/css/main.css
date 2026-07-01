@@ -3614,6 +3614,7 @@ header .container {
 	position: relative;
 	display: flex;
 	justify-content: flex-start;
+	align-items: center;
 }
 
 header .navbar {
@@ -3690,9 +3691,9 @@ header .sticky {
 }
 
 header .navbar li a {
-	font-size: 16px;
+	font-size: 18px;
 	color: #fff;
-	font-weight: 500;
+	font-weight: 400;
 	padding: 16px 15px;
 	letter-spacing: 0px;
 }
@@ -4271,7 +4272,7 @@ header nav {
 
 .call-mun {
 	font-size: 16px;
-	color: #f10926;
+	color: #c10037;
 	display: inline-block;
 	margin-left: auto;
 }
@@ -4430,7 +4431,7 @@ header.header-style-3 .navbar-collapse.collapse {}
 
 header.header-style-3 .navbar li a {
 	color: #171717;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 header.header-style-3 .navbar li a.dropdown-toggle:after {
@@ -4725,7 +4726,7 @@ header.header-style-5 .navbar li a:before {
 
 .layout-4 .top-bar {
 	border: none;
-	background: #ef3b3b;
+	background: #c10037;
 }
 
 .layout-4 .top-bar p {

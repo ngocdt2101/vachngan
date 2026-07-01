@@ -7964,3 +7964,9 @@ footer .social p a {
     justify-content: space-between;
 	flex-wrap: wrap;
 }
+
+.list-blogs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 15px;
+}

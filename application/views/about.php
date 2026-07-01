@@ -1,30 +1,14 @@
-<!--Inner Banner-->
-<div class="aboutbanner innerbanner">
-	<div class="inner-breadcrumb">
-		<div class="container">
-			<div class="row align-items-center text-center">
-				<div class="col-md-12 col-12 ">
-					<h2 class="breadcrumb-title">Giới Thiệu</h2>
-					<nav aria-label="breadcrumb" class="page-breadcrumb">
-						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="<?php echo base_url() ?>">Trang chủ</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Giới thiệu</li>
-						</ol>
-					</nav>
-				</div>
-			</div>
-		</div>
+<section class="about-sec padding-top-60 padding-bottom-20">
+	<div class="container">
+		<img src="<?php echo base_url() . POST_UPLOAD_PATH . $about['banner'] ?>" class="img-fluid" alt="">
 	</div>
-</div>
-<!--/Inner Banner-->
+</section>
+
 
 <!--About Content-->
 <section class="about-content">
 	<div class="container">
 		<div class="about-listee">
-			<div class="about-img">
-				<img src="<?php echo base_url() . POST_UPLOAD_PATH . $about['banner'] ?>" class="img-fluid" alt="">
-			</div>
 			<div class="about-info">
 				<h4> <span>Về </span> Chúng Tôi</h4>
 				<p> <?php echo $about['description'] ?></p>
@@ -35,7 +19,7 @@
 <!--/About Content-->
 
 <!--How It Works-->
-<section class="howitworks">
+<section class="about-sec">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12">
