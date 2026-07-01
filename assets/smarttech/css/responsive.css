@@ -573,7 +573,7 @@ header .container {
 
 .navbar-toggle {
 	position: absolute;
-	top: 6px;
+	top: 0px;
 	right: 15px;
 	height: 42px;
 	width: 42px;
@@ -733,7 +733,7 @@ header.header-style-3 .nav-uder-bar {
 	margin-top: 20px;
 }
 header.header-style-3 .navbar-toggle {
-	background: #372e41;
+	background: #ce0a0a;
 	color: #fff;
 }
 header.header-style-3 .cart-pop {
