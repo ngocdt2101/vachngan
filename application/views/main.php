@@ -39,12 +39,12 @@
 <body>
 
 	<div class="main-wrapper">
-		<?php // $this->load->view('header') 
+		<?php  $this->load->view('header') 
 		?>
 
 		<?php
 		if (isset($is_show_slide) && $is_show_slide == true) {
-			// $this->load->view('slide');
+			 $this->load->view('slide');
 		}
 		?>
 
