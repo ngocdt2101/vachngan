@@ -32,7 +32,6 @@
   				<p>Xưởng sản xuất Hà Nội: Số 158, đường Phan Trọng Tuệ, xã Thanh Liệt, huyện Thanh Trì, Hà Nội</p>
   				<p>Phone: 0927 680 999 <br> 0909 256 236 <br> 0909 224 979 <br> 0983 670 779</p>
   				<p>Email: vachnganbamien@gmail.com</p>
-  				<div class="social-links"> <a href="#."><i class="fa fa-facebook"></i></a> <a href="#."><i class="fa fa-twitter"></i></a> <a href="#."><i class="fa fa-linkedin"></i></a> <a href="#."><i class="fa fa-pinterest"></i></a> <a href="#."><i class="fa fa-instagram"></i></a> <a href="#."><i class="fa fa-google"></i></a> </div>
   			</div>
 
   			<!-- Categories -->

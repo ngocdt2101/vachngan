@@ -3062,7 +3062,7 @@ a:focus {
 }
 .authordetails h5 {
   font-size: 24px;
-  font-weight: 800;
+  font-weight: 600;
   color: #0d233e;
   margin-bottom: 15px;
 }
@@ -3244,6 +3244,7 @@ a:focus {
 }
 .gallery-section .gallery-widget a img {
   border-radius: 10px;
+  width: 100%;
 }
 .gallery-section .gallery-widget a:hover::before {
   background: #374b5c;
@@ -5258,7 +5259,6 @@ ul.tags {
 }
 .about-content {
   padding: 70px 0;
-  background: #f9fafc;
 }
 .about-listee {
   position: relative;
@@ -5271,14 +5271,11 @@ ul.tags {
   border-radius: 20px;
 }
 .about-info {
-  width: 50%;
-  position: absolute;
-  right: 78px;
-  background: #fff;
-  padding: 30px 30px;
-  border-radius: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+    width: 100%;
+    background: #fff;
+    padding: 30px 30px;
+    border-radius: 10px;
+    box-shadow: 4px 10px 24px rgba(13, 35, 62, 0.08);
 }
 .about-info p {
   color: #666;
@@ -20649,23 +20646,23 @@ section.advertisement {
 }
 
 .phone-call:before {
-position: absolute;
-content: " ";
-z-index: -1;
-top: -15px;
-left: -15px;
-background: #d16b42;
+    position: absolute;
+    content: " ";
+    z-index: -1;
+    top: -5px;
+    left: -5px;
+    background: #d16b42;
     background-image: linear-gradient(122deg, #ef213e, #b56521);
-width: 80px;
-height: 80px;
-border-radius: 100%;
-animation-fill-mode: both;
--webkit-animation-fill-mode: both;
-opacity: 0.6;
--webkit-animation: pulse 1s ease-out;
-animation: pulse 1.8s ease-out;
--webkit-animation-iteration-count: infinite;
-animation-iteration-count: infinite;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    opacity: 0.6;
+    -webkit-animation: pulse 1s ease-out;
+    animation: pulse 1.8s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes pulse {

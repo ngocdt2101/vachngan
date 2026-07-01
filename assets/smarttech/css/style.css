@@ -3965,7 +3965,7 @@ footer .social p a {
 
 .footer-dark {
 	background: #333333;
-	padding-bottom: 0px;
+	padding-bottom: 25px;
 }
 
 .footer-dark .shipping-info {
@@ -7985,4 +7985,8 @@ footer .social p a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px 15px;
+}
+
+.about-sec img {
+	max-width: 100%;
 }

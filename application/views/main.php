@@ -28,8 +28,13 @@
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/bootstrap.min.css">
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/font-awesome.min.css">
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/main.css">
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/listee/css/style.css?v=1.01">
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/style.css">
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/smarttech/css/responsive.css">
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/listee/plugins/fancybox/jquery.fancybox.min.css">
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/listee/plugins/fontawesome/css/fontawesome.min.css">
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/listee/plugins/fontawesome/css/all.min.css">
+
 
 <!-- Google Analytics -->
 <?php echo $company['google_analytics'] ?>
@@ -82,7 +87,7 @@
 	<?php echo $company['footer_setting'] ?>
 
 	<!-- GO TO TOP  -->
-	<a href="#" class="cd-top"><i class="fa fa-angle-up"></i></a>
+	<!-- <a href="#" class="cd-top"><i class="fa fa-angle-up"></i></a> -->
 	<!-- GO TO TOP End -->
 
 	<!-- JavaScripts -->
@@ -92,6 +97,7 @@
 	<script src="<?php echo base_url() ?>assets/smarttech/js/vendors/own-menu.js"></script>
 	<script src="<?php echo base_url() ?>assets/smarttech/js/vendors/jquery.sticky.js"></script>
 	<script src="<?php echo base_url() ?>assets/smarttech/js/vendors/owl.carousel.min.js"></script>
+	<script src="<?php echo base_url() ?>assets/listee/plugins/fancybox/jquery.fancybox.min.js"></script>
 
 	<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
 	<script type="text/javascript" src="<?php echo base_url() ?>assets/smarttech/rs-plugin/js/jquery.tp.t.min.js"></script>
