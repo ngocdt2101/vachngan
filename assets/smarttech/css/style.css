@@ -1537,11 +1537,13 @@ display: flex;
 .post-content span {
 	color: unset;
 	font-size: unset;
+	font-weight: unset;
 }
 
 .post-content p {
 	color: unset;
 	font-size: unset;
+	font-weight: unset;
 }
 
 
