@@ -7957,3 +7957,8 @@ footer .social p a {
 	font-weight: bold;
 	color: #0088cc !important;
 }
+
+.big-nsv .container ul {
+	display: flex;
+    justify-content: space-between;
+}

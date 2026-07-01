@@ -17,7 +17,7 @@
 	<!-- Header -->
 	<header class="header-style-3">
 		<div class="container">
-			<div class="logo"> <a href="index.html"><img src="<?php echo base_url() ?>assets/smarttech/images/compact_logo2.png" alt=""></a> </div>
+			<div class="logo"> <a href="<?php echo base_url() ?>"><img src="<?php echo base_url() ?>assets/smarttech/images/compact_logo2.png" alt=""></a> </div>
 			<nav class="navbar ownmenu">
 
 				<!-- Categories -->
@@ -28,121 +28,45 @@
 				<!-- NAV -->
 				<div class="collapse navbar-collapse" id="nav-open-btn">
 					<ul class="nav">
-						<li class="dropdown megamenu active"> <a href="index.html" class="dropdown-toggle" data-toggle="dropdown">Home </a>
+						<li class="<?php echo(strtolower($this->router->fetch_class()) == 'home' ? 'active' : '')?>">
+							<a href="<?php echo base_url() ?>">Trang chủ</a>
+						</li>
+						<li class="<?php echo(strtolower($this->router->fetch_class()) == 'about' ? 'active' : '')?>">
+							<a href="<?php echo base_url().'gioi-thieu' ?>">Giới thiệu</a>
+						</li>
+						<li class="dropdown megamenu <?php echo(strtolower($this->router->fetch_class()) == 'quotation' ? 'active' : '')?>"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Báo giá </a>
 							<div class="dropdown-menu animated-2s fadeInUpHalf">
 								<div class="mega-inside scrn">
 									<ul class="home-links">
-										<li><a href="index.html"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-1.jpg" alt=""> <span>Home Version 1</span></a></li>
-										<li><a href="index-2.html"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-2.jpg" alt=""> <span>Home Version 2</span></a> </li>
-										<li><a href="index-3.html"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-3.jpg" alt=""> <span>Home Version 3</span></a></li>
-										<li><a href="index-4.html"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-4.jpg" alt=""> <span>Home Version 4</span></a></li>
-										<li><a href="index-5.html"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-5.jpg" alt=""> <span>Home Version 5</span></a></li>
-										<li><a href="index-6.html"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-6.jpg" alt=""> <span>Home Version 6</span></a></li>
-										<li><a href="index-7.html"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-7.jpg" alt=""> <span>Home Version 7</span></a></li>
-										<li><a href="index-8.html"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-8.jpg" alt=""> <span>Home Version 8</span></a></li>
-										<li><a href="index-9.html"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-9.jpg" alt=""> <span>Home Version 9</span></a></li>
-										<li><a href="index-10.html"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-10.jpg" alt=""> <span>Home Version 10</span></a></li>
-										<li><a href="index-11.html"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-11.jpg" alt=""> <span>Home Version 11</span></a></li>
-										<li><a href="index-12.html"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-12.jpg" alt=""> <span>Home Version 12</span></a></li>
-										<li><a href="index-13.html"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-13.jpg" alt=""> <span>Home Version 13</span></a></li>
-										<li><a href="index-14.html"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-14.jpg" alt=""> <span>Home Version 14</span></a></li>
-										<li><a href="index-15.html"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-15.jpg" alt=""> <span>Home Version 15</span></a></li>
-										<li><a href="index-16.html"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-16.jpg" alt=""> <span>Home Version 16</span></a></li>
-										<li><a href="index-17.html"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-17.jpg" alt=""> <span>Home Version 17</span></a></li>
+										<li>
+											<a href="<?php echo base_url() .'danh-muc-bao-gia/bao-gia-tam-compact' ?>"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-1.jpg" alt=""> <span>Báo giá tấm Compact</span></a>
+										</li>
+										<li>
+											<a href="<?php echo base_url() .'danh-muc-bao-gia/bao-gia-vach-ngan-ve-sinh' ?>"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-2.jpg" alt=""> <span>Báo giá vách ngăn vệ sinh</span></a>
+										</li>
+										<li>
+											<a href="<?php echo base_url() .'danh-muc-bao-gia/bao-gia-vach-ngan-di-dong' ?>"><img class="img-responsive" src="<?php echo base_url() ?>assets/smarttech/images/home-2.jpg" alt=""> <span>Báo giá vách ngăn di động</span></a>
+										</li>
 									</ul>
 								</div>
 							</div>
 						</li>
-						<li class="dropdown"> <a href="index.html" class="dropdown-toggle" data-toggle="dropdown">Pages </a>
+
+						<li class="dropdown"> <a href="index.html" class="dropdown-toggle" data-toggle="dropdown">Sản phẩm </a>
 							<ul class="dropdown-menu multi-level">
-								<li><a href="About.html"> About </a></li>
-								<li><a href="LoginForm.html"> Login Form </a></li>
-								<li><a href="GridProducts_3Columns.html"> Products 3 Columns </a></li>
-								<li><a href="GridProducts_4Columns.html"> Products 4 Columns </a></li>
-								<li><a href="ListProducts.html"> List Products </a></li>
-								<li><a href="Product-Details.html"> Product Details </a></li>
-								<li><a href="ShoppingCart.html"> Shopping Cart</a></li>
-								<li><a href="PaymentMethods.html"> Payment Methods </a></li>
-								<li><a href="DeliveryMethods.html"> Delivery Methods</a></li>
-								<li><a href="Confirmation.html"> Confirmation </a></li>
-								<li><a href="CheckoutSuccessful.html"> Checkout Successful </a></li>
-								<li><a href="Error404.html"> Error404 </a></li>
-								<li><a href="contact.html"> Contact </a></li>
-								<li class="dropdown-submenu"><a href="#."> Dropdown Level </a>
-									<ul class="dropdown-menu animated-2s fadeInRight">
-										<li><a href="#.">Level 1</a></li>
-									</ul>
-								</li>
+								<?php foreach ($all_categories as $index => $item) { ?>
+									<li>
+										<a href="<?php echo base_url() .'danh-muc-san-pham/'. $item['name_unsigned'] ?>"> <?php echo $item['name'] ?> </a>
+									</li>
+								<?php } ?>
 							</ul>
 						</li>
-						<!-- Mega Menu Nav -->
-						<li class="dropdown megamenu"> <a href="index.html" class="dropdown-toggle" data-toggle="dropdown">Mega menu </a>
-							<div class="dropdown-menu">
-								<div class="mega-inside">
-									<div class="top-lins">
-										<ul>
-											<li><a href="#."> Cell Phones & Accessories </a></li>
-											<li><a href="#."> Carrier Phones </a></li>
-											<li><a href="#."> Unlocked Phones </a></li>
-											<li><a href="#."> Prime Exclusive Phones </a></li>
-											<li><a href="#."> Accessories </a></li>
-											<li><a href="#."> Cases </a></li>
-											<li><a href="#."> Best Sellers </a></li>
-											<li><a href="#."> Deals </a></li>
-											<li><a href="#."> All Electronics </a></li>
-										</ul>
-									</div>
-									<div class="row">
-										<div class="col-sm-3">
-											<h6>Electronics</h6>
-											<ul>
-												<li><a href="#."> Cell Phones & Accessories </a></li>
-												<li><a href="#."> Carrier Phones </a></li>
-												<li><a href="#."> Unlocked Phones </a></li>
-												<li><a href="#."> Prime Exclusive Phones </a></li>
-												<li><a href="#."> Accessories </a></li>
-												<li><a href="#."> Cases </a></li>
-												<li><a href="#."> Best Sellers </a></li>
-												<li><a href="#."> Deals </a></li>
-												<li><a href="#."> All Electronics </a></li>
-											</ul>
-										</div>
-										<div class="col-sm-3">
-											<h6>Computers</h6>
-											<ul>
-												<li><a href="#."> Computers & Tablets</a></li>
-												<li><a href="#."> Monitors</a></li>
-												<li><a href="#."> Laptops & tablets</a></li>
-												<li><a href="#."> Networking</a></li>
-												<li><a href="#."> Drives & Storage</a></li>
-												<li><a href="#."> Computer Parts & Components</a></li>
-												<li><a href="#."> Printers & Ink</a></li>
-												<li><a href="#."> Office & School Supplies </a></li>
-											</ul>
-										</div>
-										<div class="col-sm-2">
-											<h6>Home Appliances</h6>
-											<ul>
-												<li><a href="#."> Refrigerators</a></li>
-												<li><a href="#."> Wall Ovens</a></li>
-												<li><a href="#."> Cooktops & Hoods</a></li>
-												<li><a href="#."> Microwaves</a></li>
-												<li><a href="#."> Dishwashers</a></li>
-												<li><a href="#."> Washers</a></li>
-											</ul>
-										</div>
-										<div class="col-sm-4"> <img class=" nav-img" src="<?php echo base_url() ?>assets/smarttech/images/navi-img.png" alt=""> </div>
-									</div>
-								</div>
-							</div>
+						<li class="<?php echo(strtolower($this->router->fetch_class()) == 'news' ? 'active' : 'inactive')?>">
+							<a href="<?php echo base_url().'tin-tuc' ?>"> Tin tức </a>
 						</li>
-						<li class="dropdown"> <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown">Blog</a>
-							<ul class="dropdown-menu multi-level">
-								<li><a href="Blog.html">Blog </a></li>
-								<li><a href="Blog_details.html">Blog Single </a></li>
-							</ul>
+						<li class="<?php echo(strtolower($this->router->fetch_class()) == 'contact' ? 'active' : 'inactive')?>">
+							<a href="<?php echo base_url().'lien-he' ?>"> Liên hệ </a>
 						</li>
-						<li> <a href="#.">Buy theme! </a></li>
 					</ul>
 				</div>
 			</nav>
@@ -161,32 +85,27 @@
 <div class="big-nsv">
 	<div class="container">
 		<ul class="nav" role="tablist">
-			<li><a href="#"><span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+			<li><a href="<?php echo base_url().'gioi-thieu' ?>"><span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
 							<circle cx="12" cy="8" r="3.2"></circle>
 							<path d="M5.5 19c1.2-3.1 3.7-4.7 6.5-4.7s5.3 1.6 6.5 4.7"></path>
 							<rect x="3" y="3" width="18" height="18" rx="2.5"></rect>
 						</svg></span> Giới thiệu </a></li>
-			<li><a href="#"><span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+			<li><a href="<?php echo base_url() .'danh-muc-bao-gia/bao-gia-tam-compact' ?>"><span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
 							<path d="M8 3h6l5 5v13H8z"></path>
 							<path d="M14 3v5h5"></path>
 							<path d="M11 13h5M11 16h5"></path>
 						</svg></span> Báo giá tấm compact </a></li>
-			<li><a href="#"><span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+			<li><a href="<?php echo base_url() .'danh-muc-bao-gia/bao-gia-vach-ngan-ve-sinh' ?>"><span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
 							<rect x="4" y="4" width="16" height="16" rx="2"></rect>
 							<path d="M10 4v16M14.5 9.5h0"></path>
 						</svg></span> Báo giá vách vệ sinh </a></li>
-			<li><a href="#"><span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+			<li><a href="<?php echo base_url() .'danh-muc-bao-gia/bao-gia-vach-ngan-di-dong' ?>"><span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
 							<rect x="3" y="5" width="5" height="14" rx="1"></rect>
 							<rect x="10" y="5" width="5" height="14" rx="1"></rect>
 							<rect x="17" y="5" width="4" height="14" rx="1"></rect>
 							<path d="M8 12h2M15 12h2"></path>
 						</svg></span> Báo giá vách di động </a></li>
-			<li><a href="#"><span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-							<path d="M12 3l8 4.5-8 4.5-8-4.5z"></path>
-							<path d="M4 7.5V16l8 5 8-5V7.5"></path>
-							<path d="M12 12v9"></path>
-						</svg></span> Sản phẩm </a></li>
-			<li><a href="#"><span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+			<li><a href="<?php echo base_url() .'lien-he' ?>"><span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
 							<path d="M15.5 16.5c-3.7 0-8-4.3-8-8V6.8c0-.9.7-1.6 1.6-1.6h2c.7 0 1.4.5 1.5 1.2l.4 2c.1.5-.1 1.1-.6 1.4l-1.3.9c.7 1.4 1.8 2.5 3.2 3.2l.9-1.3c.3-.4.9-.7 1.4-.6l2 .4c.7.1 1.2.8 1.2 1.5v2c0 .9-.7 1.6-1.6 1.6z"></path>
 						</svg></span> Liên hệ </a></li>
 		</ul>
