@@ -6,9 +6,9 @@ class Quotation3 extends Admin_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->library('image_lib');
 		$this->load->model("admin/post_model");
 		$this->load->model("admin/image_model");
+		$this->load->helper('util');
 	}
 
 	public function index()
@@ -43,16 +43,14 @@ class Quotation3 extends Admin_Controller
 			$post['display_order'] = $post_data['display_order'];
 			$post['meta_keyword'] = $post_data['meta_keyword'];
 			$post['meta_description'] = $post_data['meta_description'];
-			$post['view_count'] =  DEFAULT_VIEW_COUNT;
+			$post['view_count'] = DEFAULT_VIEW_COUNT;
 			if (array_key_exists('avatar', $_FILES)) {
-				$avatar = $this->upload_avatar();
+				$avatar = upload_image('avatar', POST_UPLOAD_PATH, POST_IMAGE_WIDTH, POST_IMAGE_HEIGHT);
 				$post['avatar'] = $avatar['thumb'];
 			}
 
-			// Insert Record
-			$id = $this->post_model->insert($post);
+			$this->post_model->insert($post);
 
-			// Set response to Client
 			echo json_encode(array(
 				'success' => true
 			));
@@ -91,14 +89,12 @@ class Quotation3 extends Admin_Controller
 			$post['meta_keyword'] = $post_data['meta_keyword'];
 			$post['meta_description'] = $post_data['meta_description'];
 			if (array_key_exists('avatar', $_FILES)) {
-				$avatar = $this->upload_avatar();
+				$avatar = upload_image('avatar', POST_UPLOAD_PATH, POST_IMAGE_WIDTH, POST_IMAGE_HEIGHT);
 				$post['avatar'] = $avatar['thumb'];
 			}
 
-			// Update Record
 			$this->post_model->update($post);
 
-			// Set response to Client
 			echo json_encode(array(
 				'success' => true
 			));
@@ -112,10 +108,7 @@ class Quotation3 extends Admin_Controller
 		if ($post_data) {
 			$ids = $post_data['ids'];
 
-			// Delete category
 			$this->post_model->delete($ids);
-
-			// Delete Avatar
 
 			echo json_encode(array(
 				"success" => true
@@ -163,78 +156,5 @@ class Quotation3 extends Admin_Controller
 				"success" => $result
 			));
 		}
-	}
-
-	public function upload_avatar()
-	{
-		if (!file_exists(POST_UPLOAD_PATH)) {
-			mkdir(POST_UPLOAD_PATH, 777, true);
-		}
-		$config['upload_path'] = POST_UPLOAD_PATH;
-		$config['allowed_types'] = 'jpg|jpeg|png|gif';
-		$config['overwrite'] = false;
-		$config['max_size'] = 10240;
-
-		// Load and initialize upload library 
-		$this->load->library('upload', $config);
-		$this->upload->initialize($config);
-
-		if ($this->upload->do_upload('avatar')) {
-			$fileInfo = $this->upload->data();
-			$name = $fileInfo['file_name'];
-			$thumb = $this->create_thumb($fileInfo, POST_IMAGE_WIDTH, POST_IMAGE_HEIGHT);
-			return ['name' => $name, 'thumb' => $thumb];
-		}
-		return ['name' => NULL, 'thumb' => NULL];
-	}
-
-	public function create_thumb($fileInfo, $new_width, $new_height)
-	{
-		$extension = pathinfo($fileInfo['file_name'], PATHINFO_EXTENSION);
-		$base_name = basename($fileInfo['file_name'], '.' . $extension);
-		$cropped_name = $base_name . '_cropped.' . $extension;
-		$thumb_name = $base_name . '_cropped_thumb.' . $extension;
-
-		// Config to cropping
-		$config = array(
-			'image_library' => 'gd2',
-			'source_image' => $fileInfo['full_path'],
-			'new_image' => $fileInfo['file_path'],
-			'maintain_ratio' => FALSE,
-			'create_thumb' => TRUE,
-			'thumb_marker' => '_cropped',
-		);
-
-		//Set cropping for y or x axis, depending on image orientation
-		if ($fileInfo['image_width'] / $fileInfo['image_height'] > $new_width / $new_height) {
-			$config['width'] = round($fileInfo['image_height'] * $new_width / $new_height);
-			$config['height'] = $fileInfo['image_height'];
-			$config['x_axis'] = round(($fileInfo['image_width'] - $config['width']) / 2);
-		} else {
-			$config['height'] = round($fileInfo['image_width'] * $new_height / $new_width);
-			$config['width'] = $fileInfo['image_width'];
-			$config['y_axis'] = round(($fileInfo['image_height'] - $config['height']) / 2);
-		}
-
-		$this->image_lib->initialize($config);
-
-		if ($this->image_lib->crop()) {
-			// Resize Image
-			unset($config);
-			$config = array(
-				'image_library' => 'gd2',
-				'source_image' => $fileInfo['file_path'] . $cropped_name,
-				'new_image' => $fileInfo['file_path'],
-				'create_thumb' => TRUE,
-				'thumb_marker' => '_thumb',
-				'width' => $new_width,
-				'height' => $new_height
-			);
-			$this->image_lib->initialize($config);
-			$this->image_lib->resize();
-			unlink(POST_UPLOAD_PATH . $cropped_name);
-		}
-		$this->image_lib->clear();
-		return $thumb_name;
 	}
 }
