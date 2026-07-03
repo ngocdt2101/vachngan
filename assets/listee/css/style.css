@@ -1072,7 +1072,7 @@ table.dataTable thead .sorting_desc_disabled:after {
 }
 .logo a img {
   float: left;
-  max-height: 32px;
+  max-height: 45px;
 }
 .header-nav {
   -webkit-box-align: center;
