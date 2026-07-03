@@ -40,7 +40,7 @@
 							<label class="col-sm-3 control-label">Ảnh đại diện</label>
 							<div class="col-sm-12">
 								<div class="fileinput fileinput-new" data-provides="fileinput">
-									<div class="fileinput-new thumbnail" style="width: 600px; height: 450px;" data-trigger="fileinput">
+									<div class="fileinput-new thumbnail" style="width: 350px; height: <?php echo (int)(350 * POST_IMAGE_HEIGHT / POST_IMAGE_WIDTH) ?>px;" data-trigger="fileinput">
 										<img src="http://placehold.it/600x450" alt="...">
 									</div>
 									<div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 600px; max-height: 450px"></div>
