@@ -20660,7 +20660,7 @@ section.advertisement {
     -webkit-animation-fill-mode: both;
     opacity: 0.6;
     -webkit-animation: pulse 1s ease-out;
-    animation: pulse 1.8s ease-out;
+    animation: pulse 0.6s ease-out;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
 }
@@ -20719,10 +20719,92 @@ section.advertisement {
 }
 }
 
+@-webkit-keyframes zalo-chat-shake {
+0% {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+10% {
+  -webkit-transform: rotate(-18deg);
+  transform: rotate(-18deg);
+}
+
+20% {
+  -webkit-transform: rotate(18deg);
+  transform: rotate(18deg);
+}
+
+30% {
+  -webkit-transform: rotate(-14deg);
+  transform: rotate(-14deg);
+}
+
+40% {
+  -webkit-transform: rotate(14deg);
+  transform: rotate(14deg);
+}
+
+50% {
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+
+60% {
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+
+70%,
+100% {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+}
+
+@keyframes zalo-chat-shake {
+0% {
+  transform: rotate(0deg);
+}
+
+10% {
+  transform: rotate(-18deg);
+}
+
+20% {
+  transform: rotate(18deg);
+}
+
+30% {
+  transform: rotate(-14deg);
+}
+
+40% {
+  transform: rotate(14deg);
+}
+
+50% {
+  transform: rotate(-10deg);
+}
+
+60% {
+  transform: rotate(10deg);
+}
+
+70%,
+100% {
+  transform: rotate(0deg);
+}
+}
+
 div.zalo-chat{
   position: fixed;
   right: 7px;
   bottom: 12px;
   top: unset !important;
   z-index: 99999;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+  -webkit-animation: zalo-chat-shake 1.2s ease-in-out infinite;
+  animation: zalo-chat-shake 1.2s ease-in-out infinite;
 }
