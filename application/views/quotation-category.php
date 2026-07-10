@@ -4,7 +4,6 @@
 
         <!-- heading -->
         <div class="section-heading">
-          <span>Báo giá</span>
           <h2><?php echo $section_header ?></h2>
           <p>Cập nhật mới nhất giá các loại tấm compact trên thị trường hiện nay</p>
           <hr>

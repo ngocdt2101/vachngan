@@ -1129,6 +1129,14 @@ a:focus {
 	overflow: hidden;
 }
 
+/* Blog Grid */
+.list-blogs {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 24px;
+	margin-bottom: 40px;
+}
+
 /* Product Grid */
 .item-col-4 {
 	display: grid;
@@ -1365,6 +1373,7 @@ a:focus {
 	#blog-slide-a,
 	#blog-slide-b,
 	#blog-slide-news,
+	.list-blogs,
 	.item-col-4 {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
@@ -1553,6 +1562,7 @@ a:focus {
 	#blog-slide-a,
 	#blog-slide-b,
 	#blog-slide-news,
+	.list-blogs,
 	.item-col-4 {
 		grid-template-columns: 1fr;
 	}
@@ -1608,4 +1618,8 @@ a:focus {
 	.about-sec:first-of-type img {
 		max-height: 320px;
 	}
+}
+
+.section-heading .title-right {
+	font-size: 25px;
 }
