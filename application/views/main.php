@@ -137,6 +137,84 @@
 		})(jQuery);
 	</script>
 
+	<script>
+		(function ($) {
+			var $slider = $('#heroSlider');
+			if (!$slider.length) return;
+
+			var $items   = $slider.find('.hero-slider__item');
+			var $dots    = $slider.find('.hero-slider__dot');
+			var $bar     = $slider.find('.hero-slider__progress-bar');
+			var total    = $items.length;
+			var current  = 0;
+			var DURATION = 5000;
+			var timer, barAnim;
+
+			function restartItemAnimations($item) {
+				/* Force reflow so CSS animations replay on re-activation */
+				$item.find('.hero-slider__bg, .hero-main__eyebrow, .hero-main__content h1, .hero-main__content p, .hero-main__actions').each(function () {
+					this.style.animation = 'none';
+					void this.offsetWidth; /* reflow */
+					this.style.animation = '';
+				});
+			}
+
+			function startProgressBar() {
+				if (!$bar.length) return;
+				$bar.css({ transition: 'none', width: '0%' });
+				void $bar[0].offsetWidth;
+				$bar.css({ transition: 'width ' + DURATION + 'ms linear', width: '100%' });
+			}
+
+			function goTo(index, dir) {
+				if (index === current) return;
+				var $outgoing = $items.eq(current);
+				$dots.eq(current).removeClass('active');
+				$outgoing.removeClass('active');
+
+				current = (index + total) % total;
+				var $incoming = $items.eq(current);
+
+				restartItemAnimations($incoming);
+				$incoming.addClass('active');
+				$dots.eq(current).addClass('active');
+				startProgressBar();
+			}
+
+			function startAuto() {
+				startProgressBar();
+				timer = setInterval(function () { goTo(current + 1); }, DURATION);
+			}
+
+			function resetAuto() {
+				clearInterval(timer);
+				startAuto();
+			}
+
+			$slider.find('.hero-slider__arrow--prev').on('click', function () {
+				goTo(current - 1); resetAuto();
+			});
+			$slider.find('.hero-slider__arrow--next').on('click', function () {
+				goTo(current + 1); resetAuto();
+			});
+			$dots.on('click', function () {
+				goTo($(this).data('index')); resetAuto();
+			});
+
+			/* Touch / swipe */
+			var touchStartX = 0;
+			$slider[0].addEventListener('touchstart', function (e) {
+				touchStartX = e.changedTouches[0].clientX;
+			}, { passive: true });
+			$slider[0].addEventListener('touchend', function (e) {
+				var dx = e.changedTouches[0].clientX - touchStartX;
+				if (Math.abs(dx) > 40) { goTo(dx < 0 ? current + 1 : current - 1); resetAuto(); }
+			}, { passive: true });
+
+			startAuto();
+		})(jQuery);
+	</script>
+
 </body>
 
 </html>
