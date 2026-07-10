@@ -191,8 +191,8 @@
       <ul class="nav nav-tabs mb-4" id="productTabs" role="tablist">
         <?php $first = true; ?>
         <?php foreach ($categories as $cat_index => $category): ?>
-          <li class="nav-item" role="presentation">
-            <a class="nav-link <?php echo $first ? 'active' : ''; ?>" id="product-tab-<?php echo $cat_index; ?>" data-toggle="tab" href="#product-pane-<?php echo $cat_index; ?>" role="tab" aria-controls="product-pane-<?php echo $cat_index; ?>" aria-selected="<?php echo $first ? 'true' : 'false'; ?>">
+          <li role="presentation" <?php echo $first ? 'class="active"' : ''; ?>>
+            <a href="#product-pane-<?php echo $cat_index; ?>" aria-controls="product-pane-<?php echo $cat_index; ?>" role="tab" data-toggle="tab">
               <?php echo $category; ?>
             </a>
           </li>
@@ -204,7 +204,7 @@
       <div class="tab-content" id="productTabContent">
         <?php $first = true; ?>
         <?php foreach ($categories as $cat_index => $category): ?>
-          <div class="tab-pane fade <?php echo $first ? 'show active' : ''; ?>" id="product-pane-<?php echo $cat_index; ?>" role="tabpanel" aria-labelledby="product-tab-<?php echo $cat_index; ?>">
+          <div role="tabpanel" class="tab-pane <?php echo $first ? 'active' : ''; ?>" id="product-pane-<?php echo $cat_index; ?>">
             <div class="item-col-4">
               <?php foreach ($grouped_products[$category] as $item) { ?>
                 <!-- Product -->

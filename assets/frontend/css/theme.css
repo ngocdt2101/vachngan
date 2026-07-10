@@ -1012,31 +1012,90 @@ a:focus {
 .nav-tabs {
 	border-bottom: 2px solid var(--vc-border);
 	gap: 0;
+	display: flex;
+	align-items: center;
+	overflow-x: auto;
+	padding-bottom: 12px;
 }
 
-.nav-tabs .nav-link {
+.nav-tabs > li {
+	margin-bottom: 0;
+	margin-right: 0;
+	flex-shrink: 0;
+}
+
+.nav-tabs > li > a {
 	color: #999;
 	font-weight: 600;
-	padding: 14px 22px;
+	font-size: 16px;
+    padding: 0 10px;
 	border: none;
-	border-bottom: 3px solid transparent;
-	margin-bottom: -2px;
-	transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.nav-tabs .nav-link:hover {
-	color: var(--vc-primary);
-	border-bottom-color: rgba(43, 108, 176, 0.3);
-}
-
-.nav-tabs .nav-link.active {
-	color: var(--vc-primary);
 	background-color: transparent;
-	border-bottom-color: var(--vc-primary);
+	border-bottom: 3px solid transparent;
+	position: relative;
+	transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+	display: flex;
+	align-items: center;
+	margin-right: 8px;
+}
+
+.nav-tabs > li > a::after {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+    left: 0;
+    right: 0;
+	height: 3px;
+	background: linear-gradient(90deg, var(--vc-primary), var(--vc-accent));
+	border-radius: 2px;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-tabs > li > a:hover {
+	color: var(--vc-primary);
+}
+
+.nav-tabs > li > a:hover::after {
+	transform: scaleX(0.6);
+	opacity: 0.7;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover {
+    color: var(--vc-primary);
+    background-color: transparent;
+    font-weight: 600;
+	text-decoration: none;
+}
+
+.nav-tabs > li.active > a::after {
+	transform: scaleX(1);
+	opacity: 1;
 }
 
 .tab-content {
-	padding-top: 30px;
+	padding-top: 40px;
+}
+
+.tab-content .tab-pane {
+	animation: fadeInTab 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.tab-content .tab-pane.active {
+	animation: fadeInTab 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes fadeInTab {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 @media (max-width: 1199px) {
