@@ -443,7 +443,7 @@ a:focus {
 /* ── Hero Slider ── */
 .hero-slider {
 	position: relative;
-	border-radius: 28px;
+	border-radius: 15px;
 	overflow: hidden;
 	box-shadow: var(--vc-shadow);
 	min-height: 680px;
@@ -1133,6 +1133,112 @@ a:focus {
 	}
 }
 
+/* Floating Action Icons */
+.phone-call,
+.zalo-chat {
+	position: fixed;
+	z-index: 999;
+	right: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+	transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+	cursor: pointer;
+	animation: floatBounce 3s ease-in-out infinite;
+	text-decoration: none;
+}
+
+.phone-call {
+	bottom: 90px;
+	background: linear-gradient(135deg, var(--vc-accent), #ff9e3c);
+}
+
+.phone-call img {
+	width: 28px;
+	height: auto;
+	filter: brightness(0) invert(1);
+}
+
+.phone-call:hover {
+	transform: scale(1.12);
+	box-shadow: 0 12px 32px rgba(242, 138, 26, 0.4);
+}
+
+.zalo-chat {
+	bottom: 20px;
+	background: linear-gradient(135deg, var(--vc-primary), #35a07f);
+}
+
+.zalo-chat img {
+	width: 36px;
+	height: auto;
+}
+
+.zalo-chat:hover {
+	transform: scale(1.12);
+	box-shadow: 0 12px 32px rgba(43, 108, 176, 0.4);
+}
+
+.zalo-chat a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+/* Pulse glow effect */
+.phone-call::before,
+.zalo-chat::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	top: 0;
+	left: 0;
+	box-shadow: 0 0 0 0 currentColor;
+	opacity: 0.7;
+	animation: pulse 2s infinite;
+}
+
+.phone-call::before {
+	color: var(--vc-accent);
+}
+
+.zalo-chat::before {
+	color: var(--vc-primary);
+}
+
+@keyframes floatBounce {
+	0%, 100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-12px);
+	}
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 currentColor;
+		opacity: 0.7;
+	}
+	70% {
+		box-shadow: 0 0 0 12px currentColor;
+		opacity: 0;
+	}
+	100% {
+		box-shadow: 0 0 0 0 currentColor;
+		opacity: 0;
+	}
+}
+
 @media (max-width: 1199px) {
 	.feature-grid,
 	.shipping-info--modern ul,
@@ -1332,5 +1438,28 @@ a:focus {
 
 	.footer-dark.site-footer {
 		padding-top: 48px;
+	}
+
+	.phone-call,
+	.zalo-chat {
+		width: 48px;
+		height: 48px;
+		right: 16px;
+	}
+
+	.phone-call {
+		bottom: 80px;
+	}
+
+	.phone-call img {
+		width: 24px;
+	}
+
+	.zalo-chat {
+		bottom: 16px;
+	}
+
+	.zalo-chat img {
+		width: 32px;
 	}
 }

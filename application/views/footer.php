@@ -1,26 +1,7 @@
   <!-- Footer -->
-	<footer class="footer-dark site-footer">
+  <footer class="footer-dark site-footer">
   	<div class="container">
 
-  		<!-- Newslatter -->
-  		<div class="newslatter">
-  			<div class="container">
-  				<div class="row">
-  					<div class="col-md-4">
-  						<h3> <i class="fa fa-envelope-o"></i> Theo dõi <small>Nhận ưu đãi lớn cho bạn!</small></h3>
-  					</div>
-  					<div class="col-md-5">
-  						<form>
-  							<input type="email" placeholder="Your email address here...">
-  							<button type="submit">Subscribe!</button>
-  						</form>
-  					</div>
-  					<div class="col-md-3">
-  						<h3> <i class="fa fa-phone"></i> 0927 680 999 <small>Hotline</small></h3>
-  					</div>
-  				</div>
-  			</div>
-  		</div>
   		<div class="row">
 
   			<!-- Contact -->
@@ -80,7 +61,7 @@
   </footer>
 
   <!-- Rights -->
-	<div class="rights dark site-rights">
+  <div class="rights dark site-rights">
   	<div class="container">
   		<div class="row">
   			<div class="col-sm-6">
