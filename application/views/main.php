@@ -34,7 +34,7 @@
 
 <body>
 
-	<div class="main-wrapper">
+	<div class="main-wrapper site-shell">
 		<?php  $this->load->view('header') 
 		?>
 

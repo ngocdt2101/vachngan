@@ -1,7 +1,12 @@
-  <section class="featur-tabs padding-top-60 padding-bottom-30">
+  <section class="showcase-section showcase-section--alt">
     <div class="container">
 
-		<h1 class="breadcrumb-title" style="font-size: 30px; text-align: center;"><?php echo $category['name']?></h1>
+    <div class="section-heading">
+      <span>Danh mục sản phẩm</span>
+      <h2><?php echo $category['name']?></h2>
+      <p>Khám phá các sản phẩm phù hợp cho dự án của bạn.</p>
+      <hr>
+    </div>
 
       <!-- Nav tabs -->
       <ul class="nav nav-tabs nav-bars margin-bottom-40" role="tablist">

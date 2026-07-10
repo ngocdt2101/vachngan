@@ -1,45 +1,49 @@
-<div id="wrap" class="layout-4 red site-shell">
-	<div class="top-bar site-topbar">
-		<div class="container site-topbar__inner">
-			<div class="site-topbar__links">
-				<a href="<?php echo base_url() ?>">Trang Chủ</a>
-				<span>Sản Phẩm</span>
-				<span>Giải Pháp</span>
-				<span>Dự Án</span>
-				<span>Báo Giá</span>
-				<span>Tin Tức</span>
-				<span>Liên Hệ</span>
-			</div>
-			<a class="site-topbar__cta" href="tel:<?php echo str_replace(' ', '', str_replace('-', '', str_replace('.', '', $company['hotline']))) ?>">LIÊN HỆ NGAY: <?php echo str_replace(' ', '', str_replace('-', '', str_replace('.', '', $company['hotline']))) ?></a>
-		</div>
-	</div>
+<div id="wrap" class="site-shell">
 
-	<header class="header-style-3 site-header">
-		<div class="container site-header__inner">
-			<div class="logo site-header__logo">
-				<a href="<?php echo base_url() ?>"><img src="<?php echo base_url() ?>assets/frontend/img/compact_logo2.png" alt="Viet Compact"></a>
-			</div>
-			<nav class="navbar ownmenu site-nav">
+	<header class="site-header">
+		<nav class="navbar navbar-default site-navbar">
+			<div class="container">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-open-btn" aria-expanded="false"><span><i class="fa fa-navicon"></i></span></button>
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-open-btn" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span><i class="fa fa-navicon"></i></span>
+					</button>
+					<a class="navbar-brand site-header__logo" href="<?php echo base_url() ?>">
+						<img src="<?php echo base_url() ?>assets/frontend/img/compact_logo2.png" alt="Viet Compact">
+					</a>
 				</div>
-				<div class="collapse navbar-collapse" id="nav-open-btn">
-					<ul class="nav site-nav__list">
+
+				<div class="collapse navbar-collapse site-navbar__collapse" id="nav-open-btn">
+					<ul class="nav navbar-nav site-navbar__menu">
 						<li class="<?php echo(strtolower($this->router->fetch_class()) == 'home' ? 'active' : '')?>"><a href="<?php echo base_url() ?>">Trang chủ</a></li>
 						<li class="<?php echo(strtolower($this->router->fetch_class()) == 'about' ? 'active' : '')?>"><a href="<?php echo base_url().'gioi-thieu' ?>">Giới thiệu</a></li>
 						<li class="dropdown megamenu <?php echo(strtolower($this->router->fetch_class()) == 'quotation' ? 'active' : '')?>">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Báo giá</a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Báo giá</a>
 							<div class="dropdown-menu animated-2s fadeInUpHalf">
-								<div class="mega-inside scrn">
-									<ul class="home-links">
-										<li><a href="<?php echo base_url() .'danh-muc-bao-gia/bao-gia-tam-compact' ?>"><img class="img-responsive" src="<?php echo base_url() ?>assets/frontend/img/menu-tc.jpg" alt=""> <span>Báo giá tấm Compact</span></a></li>
-														<li><a href="<?php echo base_url() .'danh-muc-bao-gia/bao-gia-vach-ngan-ve-sinh' ?>"><img class="img-responsive" src="<?php echo base_url() ?>assets/frontend/img/menu-vs.jpg" alt=""> <span>Báo giá vách ngăn vệ sinh</span></a></li>
-														<li><a href="<?php echo base_url() .'danh-muc-bao-gia/bao-gia-vach-ngan-di-dong' ?>"><img class="img-responsive" src="<?php echo base_url() ?>assets/frontend/img/menu-dt.jpg" alt=""> <span>Báo giá vách ngăn di động</span></a></li>
-									</ul>
-								</div>
+								<ul class="home-links home-links--text">
+									<li>
+										<a href="<?php echo base_url() .'danh-muc-bao-gia/bao-gia-tam-compact' ?>">
+											<strong>Báo giá tấm Compact</strong>
+											<span>Tổng hợp giải pháp, màu sắc và cấu hình cho công trình.</span>
+										</a>
+									</li>
+									<li>
+										<a href="<?php echo base_url() .'danh-muc-bao-gia/bao-gia-vach-ngan-ve-sinh' ?>">
+											<strong>Báo giá vách ngăn vệ sinh</strong>
+											<span>Gợi ý cấu hình bền đẹp, tối ưu ngân sách và bảo trì.</span>
+										</a>
+									</li>
+									<li>
+										<a href="<?php echo base_url() .'danh-muc-bao-gia/bao-gia-vach-ngan-di-dong' ?>">
+											<strong>Báo giá vách ngăn di động</strong>
+											<span>Thiết kế linh hoạt cho hội trường, phòng họp và sự kiện.</span>
+										</a>
+									</li>
+								</ul>
 							</div>
 						</li>
-						<li class="dropdown <?php echo(strtolower($this->router->fetch_class()) == 'product' ? 'active' : '')?>"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Sản phẩm</a>
+						<li class="dropdown <?php echo(strtolower($this->router->fetch_class()) == 'product' ? 'active' : '')?>">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sản phẩm</a>
 							<ul class="dropdown-menu multi-level">
 								<?php foreach ($all_categories as $index => $item) { ?>
 									<li><a href="<?php echo base_url() .'danh-muc-san-pham/'. $item['name_unsigned'] ?>"><?php echo $item['name'] ?></a></li>
@@ -49,24 +53,14 @@
 						<li class="<?php echo(strtolower($this->router->fetch_class()) == 'news' ? 'active' : 'inactive')?>"><a href="<?php echo base_url().'tin-tuc' ?>">Tin tức</a></li>
 						<li class="<?php echo(strtolower($this->router->fetch_class()) == 'contact' ? 'active' : 'inactive')?>"><a href="<?php echo base_url().'lien-he' ?>">Liên hệ</a></li>
 					</ul>
+					<div class="site-navbar__actions">
+						<a class="site-header__hotline" href="tel:<?php echo str_replace(' ', '', str_replace('-', '', str_replace('.', '', $company['hotline']))) ?>">
+							<span>Hotline</span>
+							<strong><?php echo str_replace(' ', '', str_replace('-', '', str_replace('.', '', $company['hotline']))) ?></strong>
+						</a>
+					</div>
 				</div>
-			</nav>
-			<a class="site-header__hotline" href="tel:<?php echo str_replace(' ', '', str_replace('-', '', str_replace('.', '', $company['hotline']))) ?>">
-				<span>Hotline</span>
-				<strong><?php echo str_replace(' ', '', str_replace('-', '', str_replace('.', '', $company['hotline']))) ?></strong>
-			</a>
-		</div>
+			</div>
+		</nav>
 	</header>
-
-	<div class="big-nsv site-quicklinks">
-		<div class="container">
-			<ul class="nav" role="tablist">
-				<li><a href="<?php echo base_url().'gioi-thieu' ?>"><span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"></circle><path d="M5.5 19c1.2-3.1 3.7-4.7 6.5-4.7s5.3 1.6 6.5 4.7"></path><rect x="3" y="3" width="18" height="18" rx="2.5"></rect></svg></span> Giới thiệu </a></li>
-				<li><a href="<?php echo base_url() .'danh-muc-bao-gia/bao-gia-tam-compact' ?>"><span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h6l5 5v13H8z"></path><path d="M14 3v5h5"></path><path d="M11 13h5M11 16h5"></path></svg></span> Báo giá tấm compact </a></li>
-				<li><a href="<?php echo base_url() .'danh-muc-bao-gia/bao-gia-vach-ngan-ve-sinh' ?>"><span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M10 4v16M14.5 9.5h0"></path></svg></span> Báo giá vách vệ sinh </a></li>
-				<li><a href="<?php echo base_url() .'danh-muc-bao-gia/bao-gia-vach-ngan-di-dong' ?>"><span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="5" height="14" rx="1"></rect><rect x="10" y="5" width="5" height="14" rx="1"></rect><rect x="17" y="5" width="4" height="14" rx="1"></rect><path d="M8 12h2M15 12h2"></path></svg></span> Báo giá vách di động </a></li>
-				<li><a href="<?php echo base_url() .'lien-he' ?>"><span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 16.5c-3.7 0-8-4.3-8-8V6.8c0-.9.7-1.6 1.6-1.6h2c.7 0 1.4.5 1.5 1.2l.4 2c.1.5-.1 1.1-.6 1.4l-1.3.9c.7 1.4 1.8 2.5 3.2 3.2l.9-1.3c.3-.4.9-.7 1.4-.6l2 .4c.7.1 1.2.8 1.2 1.5v2c0 .9-.7 1.6-1.6 1.6z"></path></svg></span> Liên hệ </a></li>
-			</ul>
-		</div>
-	</div>
 </div>
