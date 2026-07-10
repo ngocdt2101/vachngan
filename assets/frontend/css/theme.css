@@ -735,9 +735,10 @@ a:focus {
 }
 
 .feature-card h3 {
-	font-size: 19px;
+	font-size: 18px;
 	margin: 0 0 10px;
 	line-height: 1.35;
+	font-weight: 600;
 }
 
 .feature-card p {
