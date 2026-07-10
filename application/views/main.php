@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
 
-<!-- Required Meta Tags -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="robots" content="index, follow">
-<title><?php echo isset($title) ? $title : $company['meta_keyword'] ?></title>
-<meta name="keywords" content="<?php echo isset($meta_keyword) ? $meta_keyword : $company['meta_keyword'] ?>">
-<meta name="description" content="<?php echo isset($meta_description) ? $meta_description : $company['meta_description'] ?>">
-<meta property="og:type" content="<?php echo isset($meta_og['type']) ? $meta_og['type'] : 'article' ?>">
-<meta property="og:title" content="<?php echo isset($meta_og['title']) ? $meta_og['title'] : $company['meta_keyword'] ?>">
-<meta property="og:description" content="<?php echo isset($meta_og['description']) ? $meta_og['description'] : $company['meta_description'] ?>">
-<meta property="og:image" content="<?php echo isset($meta_og['image']) ? $meta_og['image'] : base_url() . 'assets/frontend/img/compact_logo.png' ?>">
+	<!-- Required Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index, follow">
+	<title><?php echo isset($title) ? $title : $company['meta_keyword'] ?></title>
+	<meta name="keywords" content="<?php echo isset($meta_keyword) ? $meta_keyword : $company['meta_keyword'] ?>">
+	<meta name="description" content="<?php echo isset($meta_description) ? $meta_description : $company['meta_description'] ?>">
+	<meta property="og:type" content="<?php echo isset($meta_og['type']) ? $meta_og['type'] : 'article' ?>">
+	<meta property="og:title" content="<?php echo isset($meta_og['title']) ? $meta_og['title'] : $company['meta_keyword'] ?>">
+	<meta property="og:description" content="<?php echo isset($meta_og['description']) ? $meta_og['description'] : $company['meta_description'] ?>">
+	<meta property="og:image" content="<?php echo isset($meta_og['image']) ? $meta_og['image'] : base_url() . 'assets/frontend/img/compact_logo.png' ?>">
 
-<!-- Favicon -->
-<link rel="shortcut icon" href="<?php echo base_url() ?>assets/frontend/img/favicon.png" type="image/x-icon">
-<link rel="icon" href="<?php echo base_url() ?>assets/frontend/img/favicon.png" type="image/x-icon">
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="<?php echo base_url() ?>assets/frontend/img/favicon.svg" type="image/x-icon">
+	<link rel="icon" href="<?php echo base_url() ?>assets/frontend/img/favicon.svg" type="image/x-icon">
 
-<!-- StyleSheets -->
-<link rel="stylesheet" href="<?php echo base_url() ?>assets/frontend/css/bootstrap.min.css">
-<link rel="stylesheet" href="<?php echo base_url() ?>assets/frontend/css/fontawesome.min.css">
-<link rel="stylesheet" href="<?php echo base_url() ?>assets/frontend/css/all.min.css">
-<link rel="stylesheet" href="<?php echo base_url() ?>assets/frontend/css/jquery.fancybox.min.css">
-<link rel="stylesheet" href="<?php echo base_url() ?>assets/frontend/css/theme.css?v=1.0">
+	<!-- StyleSheets -->
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/frontend/css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/frontend/css/fontawesome.min.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/frontend/css/all.min.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/frontend/css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/frontend/css/theme.css?v=1.0">
 
 
-<!-- Google Analytics -->
-<?php echo $company['google_analytics'] ?>
+	<!-- Google Analytics -->
+	<?php echo $company['google_analytics'] ?>
 
 </head>
 
 <body>
 
 	<div class="main-wrapper site-shell">
-		<?php  $this->load->view('header') 
+		<?php $this->load->view('header')
 		?>
 
 		<?php
 		if (isset($is_show_slide) && $is_show_slide == true) {
-			 $this->load->view('slide');
+			$this->load->view('slide');
 		}
 		?>
 
 		<?php $this->load->view($subview) ?>
 
-		<?php $this->load->view('footer') ?> 
+		<?php $this->load->view('footer') ?>
 	</div>
 
 	<!-- scrollToTop start -->
@@ -65,9 +66,11 @@
 	</a>
 
 	<!-- Zalo Chat -->
-	<div class="zalo-chat">
-		<a href="https://zalo.me/<?php echo str_replace(' ', '', str_replace('-', '', str_replace('.', '', $company['zalo_chat']))) ?>" target="_blank"><img src="<?php echo base_url() ?>assets/frontend/img/zalo_icon.png" width="55" alt="zalo_icon"></a>
-	</div>
+	<a href="https://zalo.me/<?php echo str_replace(' ', '', str_replace('-', '', str_replace('.', '', $company['zalo_chat']))) ?>" target="_blank">
+		<div class="zalo-chat">
+			<img src="<?php echo base_url() ?>assets/frontend/img/zalo_icon.png" width="55" alt="zalo_icon">
+		</div>
+	</a>
 
 	<!-- Facebook Chat -->
 	<?php echo $company['facebook_chat'] ?>
@@ -84,7 +87,7 @@
 	<script src="<?php echo base_url() ?>assets/frontend/js/bootstrap.min.js"></script>
 	<script src="<?php echo base_url() ?>assets/frontend/js/jquery.fancybox.min.js"></script>
 	<script>
-		(function ($) {
+		(function($) {
 			function isMobileMenu() {
 				if (window.matchMedia) {
 					return window.matchMedia('(max-width: 767px)').matches;
@@ -92,7 +95,7 @@
 				return window.innerWidth <= 767;
 			}
 
-			$(document).on('click', '.site-navbar__menu > li.dropdown > a.dropdown-toggle', function (e) {
+			$(document).on('click', '.site-navbar__menu > li.dropdown > a.dropdown-toggle', function(e) {
 				if (!isMobileMenu()) {
 					return;
 				}
@@ -120,12 +123,12 @@
 				$submenu.stop(true, true)[willOpen ? 'slideDown' : 'slideUp'](160);
 			});
 
-			$('#nav-open-btn').on('hide.bs.collapse', function () {
+			$('#nav-open-btn').on('hide.bs.collapse', function() {
 				$(this).find('li.dropdown.open').removeClass('open').children('.dropdown-menu').hide();
 				$(this).find('a.dropdown-toggle').attr('aria-expanded', 'false');
 			});
 
-			$(window).on('resize', function () {
+			$(window).on('resize', function() {
 				if (!isMobileMenu()) {
 					$('#nav-open-btn').find('li.dropdown.open').removeClass('open');
 					$('#nav-open-btn').find('.dropdown-menu').removeAttr('style');
@@ -136,21 +139,21 @@
 	</script>
 
 	<script>
-		(function ($) {
+		(function($) {
 			var $slider = $('#heroSlider');
 			if (!$slider.length) return;
 
-			var $items   = $slider.find('.hero-slider__item');
-			var $dots    = $slider.find('.hero-slider__dot');
-			var $bar     = $slider.find('.hero-slider__progress-bar');
-			var total    = $items.length;
-			var current  = 0;
+			var $items = $slider.find('.hero-slider__item');
+			var $dots = $slider.find('.hero-slider__dot');
+			var $bar = $slider.find('.hero-slider__progress-bar');
+			var total = $items.length;
+			var current = 0;
 			var DURATION = 5000;
 			var timer, barAnim;
 
 			function restartItemAnimations($item) {
 				/* Force reflow so CSS animations replay on re-activation */
-				$item.find('.hero-slider__bg, .hero-main__eyebrow, .hero-main__content h1, .hero-main__content p, .hero-main__actions').each(function () {
+				$item.find('.hero-slider__bg, .hero-main__eyebrow, .hero-main__content h1, .hero-main__content p, .hero-main__actions').each(function() {
 					this.style.animation = 'none';
 					void this.offsetWidth; /* reflow */
 					this.style.animation = '';
@@ -159,9 +162,15 @@
 
 			function startProgressBar() {
 				if (!$bar.length) return;
-				$bar.css({ transition: 'none', width: '0%' });
+				$bar.css({
+					transition: 'none',
+					width: '0%'
+				});
 				void $bar[0].offsetWidth;
-				$bar.css({ transition: 'width ' + DURATION + 'ms linear', width: '100%' });
+				$bar.css({
+					transition: 'width ' + DURATION + 'ms linear',
+					width: '100%'
+				});
 			}
 
 			function goTo(index, dir) {
@@ -181,7 +190,9 @@
 
 			function startAuto() {
 				startProgressBar();
-				timer = setInterval(function () { goTo(current + 1); }, DURATION);
+				timer = setInterval(function() {
+					goTo(current + 1);
+				}, DURATION);
 			}
 
 			function resetAuto() {
@@ -189,25 +200,35 @@
 				startAuto();
 			}
 
-			$slider.find('.hero-slider__arrow--prev').on('click', function () {
-				goTo(current - 1); resetAuto();
+			$slider.find('.hero-slider__arrow--prev').on('click', function() {
+				goTo(current - 1);
+				resetAuto();
 			});
-			$slider.find('.hero-slider__arrow--next').on('click', function () {
-				goTo(current + 1); resetAuto();
+			$slider.find('.hero-slider__arrow--next').on('click', function() {
+				goTo(current + 1);
+				resetAuto();
 			});
-			$dots.on('click', function () {
-				goTo($(this).data('index')); resetAuto();
+			$dots.on('click', function() {
+				goTo($(this).data('index'));
+				resetAuto();
 			});
 
 			/* Touch / swipe */
 			var touchStartX = 0;
-			$slider[0].addEventListener('touchstart', function (e) {
+			$slider[0].addEventListener('touchstart', function(e) {
 				touchStartX = e.changedTouches[0].clientX;
-			}, { passive: true });
-			$slider[0].addEventListener('touchend', function (e) {
+			}, {
+				passive: true
+			});
+			$slider[0].addEventListener('touchend', function(e) {
 				var dx = e.changedTouches[0].clientX - touchStartX;
-				if (Math.abs(dx) > 40) { goTo(dx < 0 ? current + 1 : current - 1); resetAuto(); }
-			}, { passive: true });
+				if (Math.abs(dx) > 40) {
+					goTo(dx < 0 ? current + 1 : current - 1);
+					resetAuto();
+				}
+			}, {
+				passive: true
+			});
 
 			startAuto();
 		})(jQuery);

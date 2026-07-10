@@ -1,0 +1,36 @@
+<svg aria-labelledby="title desc" role="img" viewBox="0 0 99.08178 98.51528384279476" xmlns="http://www.w3.org/2000/svg" style="max-height: 500px" width="99.08178" height="98.51528384279476">
+  <title>Compact Logo</title>
+  <desc id="desc">Stacked compact panel icon with Compact wordmark</desc>
+  <defs>
+    <linearGradient y2="100%" x2="100%" y1="0%" x1="0%" id="logoGradient">
+      <stop stop-color="#2b6cb0" offset="0%"/>
+      <stop stop-color="#35a07f" offset="100%"/>
+    </linearGradient>
+    <linearGradient y2="0%" x2="100%" y1="0%" x1="0%" id="textGradient">
+      <stop stop-color="#184f87" offset="0%"/>
+      <stop stop-color="#2b6cb0" offset="100%"/>
+    </linearGradient>
+    <filter height="160%" width="140%" y="-20%" x="-20%" id="softShadow">
+      <feDropShadow flood-opacity="0.25" flood-color="#1a3f67" stdDeviation="4" dy="4" dx="0"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#softShadow)" transform="translate(8 8)">
+    <rect fill="url(#logoGradient)" rx="22" height="80" width="80" y="0" x="0"/>
+    <g transform="translate(10 14)">
+      <g transform="rotate(-12 24 24)">
+        <rect opacity="0.42" fill="#ffffff" rx="4" height="46" width="36" y="6" x="7"/>
+        <rect opacity="0.62" fill="#ffffff" rx="4" height="46" width="36" y="10" x="13"/>
+        <rect fill="#ffffff" rx="4" height="46" width="36" y="14" x="19"/>
+      </g>
+      <circle opacity="0.55" fill="#2b6cb0" r="1.8" cy="18" cx="27"/>
+      <circle opacity="0.45" fill="#2b6cb0" r="1.8" cy="22" cx="33"/>
+      <circle opacity="0.35" fill="#2b6cb0" r="1.8" cy="26" cx="39"/>
+    </g>
+  </g>
+
+  <g transform="translate(104 22)">
+    <text letter-spacing="0.5" font-weight="800" font-size="36" font-family="'Open Sans', 'Be Vietnam Pro', sans-serif" fill="url(#textGradient)" y="24" x="0">COMPACT</text>
+    <text letter-spacing="2" font-weight="600" font-size="12" font-family="'Open Sans', 'Be Vietnam Pro', sans-serif" fill="#516173" y="50" x="1">SMART PARTITION SOLUTIONS</text>
+  </g>
+</svg>
