@@ -5,7 +5,7 @@
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb-list">
 				<li><a href="<?php echo base_url() ?>"><i class="fa fa-home"></i> Trang chủ</a></li>
-				<li><a href="<?php echo base_url() . $product['category_name_unsigned'] ?>"><i class="fa fa-cube"></i> <?php echo $product['category_name'] ?></a></li>
+				<li><a href="<?php echo base_url() .'danh-muc-san-pham/' . $product['category_name_unsigned'] ?>"><i class="fa fa-cube"></i> <?php echo $product['category_name'] ?></a></li>
 				<li class="active"><?php echo $product['name'] ?></li>
 			</ol>
 		</nav>
