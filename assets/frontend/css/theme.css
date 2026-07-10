@@ -721,7 +721,7 @@ a:focus {
 #blog-slide-b,
 #blog-slide-news {
 	display: grid;
-	grid-template-columns: repeat(4, minmax(0, 1fr));
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: 20px;
 	align-items: stretch;
 }
@@ -753,7 +753,7 @@ a:focus {
 .product article .tittle {
 	display: block;
 	font-size: 18px;
-	font-weight: 800;
+	font-weight: 700;
 	line-height: 1.45;
 	padding: 0 18px;
 	margin-top: 12px;
