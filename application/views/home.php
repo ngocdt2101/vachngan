@@ -1,6 +1,5 @@
 <!-- Content -->
 <div id="content">
-
   <section class="home-intro-shell">
     <div class="container">
       <div class="section-heading section-heading--compact text-center">

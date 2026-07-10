@@ -17,6 +17,34 @@ class Home extends Frontend_Controller
 		// Get commom data
 		$data = $this->data;
 
+		// Get banner
+		unset($params);
+		$params['type'] = 'banner1';
+		$params['is_enable'] = 1;
+		$banners = $this->image_model->select($params);
+		$data['banner']['banner1'] = $banners[0];
+
+		// Get banner
+		unset($params);
+		$params['type'] = 'banner2';
+		$params['is_enable'] = 1;
+		$banners = $this->image_model->select($params);
+		$data['banner']['banner2'] = $banners[0];
+
+		// Get banner
+		unset($params);
+		$params['type'] = 'banner3';
+		$params['is_enable'] = 1;
+		$banners = $this->image_model->select($params);
+		$data['banner']['banner3'] = $banners[0];
+
+		// Get banner
+		unset($params);
+		$params['type'] = 'banner4';
+		$params['is_enable'] = 1;
+		$banners = $this->image_model->select($params);
+		$data['banner']['banner4'] = $banners[0];
+
 		// Set banner
 		$data['is_show_slide'] = true;
 		// Get slides
