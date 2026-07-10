@@ -230,11 +230,10 @@
     </div>
   </section>
 
-  <section class="shipping-info shipping-info--modern">
+  <!-- <section class="shipping-info shipping-info--modern">
     <div class="container">
       <ul>
 
-        <!-- Free Shipping -->
         <li>
           <div class="media-left"> <i class="fa fa-truck"></i> </div>
           <div class="media-body">
@@ -242,7 +241,6 @@
             <span>Đội ngũ giao hàng tận tâm và chuyên nghiệp</span>
           </div>
         </li>
-        <!-- Money Return -->
         <li>
           <div class="media-left"> <i class="fa fa-credit-card"></i> </div>
           <div class="media-body">
@@ -250,7 +248,6 @@
             <span>Các phương thức thanh toán linh hoạt và an toàn</span>
           </div>
         </li>
-        <!-- Support 24/7 -->
         <li>
           <div class="media-left"> <i class="fa fa-headphones"></i> </div>
           <div class="media-body">
@@ -258,7 +255,6 @@
             <span>Đội ngũ hỗ trợ luôn sẵn sàng giúp đỡ bạn</span>
           </div>
         </li>
-        <!-- Safe Payment -->
         <li>
           <div class="media-left"> <i class="fa fa-shield"></i> </div>
           <div class="media-body">
@@ -268,7 +264,7 @@
         </li>
       </ul>
     </div>
-  </section>
+  </section> -->
 
 
   <?php if (is_array($news_on_home) && !empty($news_on_home)) { ?>
