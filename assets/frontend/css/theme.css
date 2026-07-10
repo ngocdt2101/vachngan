@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Open+Sans:wght@500;600;700;800&display=swap");
 
 :root {
 	--vc-primary: #2b6cb0;
@@ -95,7 +95,7 @@ a:focus {
 .site-navbar__actions {
 	display: flex;
 	align-items: center;
-	margin-left: auto;
+	/* margin-left: auto; */
 	padding-left: 14px;
 }
 
@@ -105,13 +105,14 @@ a:focus {
 }
 
 .site-navbar__menu > li > a {
-	padding: 10px;
-	border-radius: 14px;
-	font-weight: 800;
-	font-size: 14px;
-	line-height: 1;
-	color: var(--vc-ink) !important;
-	transition: all 0.2s ease;
+	font-family: "Open Sans", sans-serif;
+    padding: 10px;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1;
+    color: #091b2d !important;
+    transition: all 0.2s ease;
 }
 
 .site-navbar__menu > li.active > a,
@@ -160,6 +161,7 @@ a:focus {
 
 .site-navbar__menu .home-links--text li a strong {
 	display: block;
+	font-family: "Open Sans", "Be Vietnam Pro", sans-serif;
 	font-size: 15px;
 	line-height: 1.35;
 	color: var(--vc-ink);
@@ -181,6 +183,7 @@ a:focus {
 
 .site-navbar__menu .dropdown-menu > li > a,
 .site-navbar__menu .dropdown-menu .home-links a {
+	font-family: "Open Sans", "Be Vietnam Pro", sans-serif;
 	border-radius: 12px;
 	padding: 10px 12px;
 	color: var(--vc-ink);
@@ -189,6 +192,46 @@ a:focus {
 .site-navbar__menu .dropdown-menu > li > a:hover,
 .site-navbar__menu .dropdown-menu .home-links a:hover {
 	background: rgba(43, 108, 176, 0.08);
+}
+
+.site-navbar__menu .multi-level {
+	list-style: none;
+	padding: 10px;
+	margin: 0;
+	display: grid;
+	gap: 8px;
+	min-width: 320px;
+	max-height: 420px;
+	overflow-y: auto;
+}
+
+.site-navbar__menu .multi-level > li {
+	margin: 0 0 8px;
+}
+
+.site-navbar__menu .multi-level > li:last-child {
+	margin-bottom: 0;
+}
+
+.site-navbar__menu .multi-level > li > a {
+	display: block;
+	padding: 11px 13px;
+	border-radius: 12px;
+	border: 1px solid rgba(21, 35, 50, 0.1);
+	background: linear-gradient(180deg, #ffffff 0%, #f9fbfd 100%);
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1.45;
+	color: var(--vc-ink);
+	transition: all 0.2s ease;
+}
+
+.site-navbar__menu .multi-level > li > a:hover,
+.site-navbar__menu .multi-level > li > a:focus {
+	background: linear-gradient(135deg, rgba(43, 108, 176, 0.08), rgba(53, 160, 127, 0.08));
+	border-color: rgba(43, 108, 176, 0.2);
+	box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+	transform: translateY(-1px);
 }
 
 .site-header__hotline {
@@ -230,15 +273,15 @@ a:focus {
 	}
 
 	.site-navbar__menu {
-		display: flex !important;
-		flex-direction: row;
-		align-items: center;
-		justify-content: flex-start;
-		gap: 4px;
-		flex-wrap: nowrap;
-		float: none;
-		margin: 0 8px 0 0;
-		width: auto;
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        flex-wrap: nowrap;
+        float: none;
+        margin: 0 8px 0 0;
+        width: 100%;
 	}
 
 	.site-navbar__menu > li {
@@ -803,11 +846,16 @@ a:focus {
 		position: static;
 		float: none;
 		width: 100%;
+		display: none;
 		padding: 10px 0 0;
 		margin: 0;
 		background: transparent;
 		border: 0;
 		box-shadow: none;
+	}
+
+	.site-navbar__menu > li.dropdown.open > .dropdown-menu {
+		display: block !important;
 	}
 
 	.site-navbar__menu .dropdown-menu li a {
@@ -817,6 +865,28 @@ a:focus {
 		border: 1px solid var(--vc-border);
 		margin-bottom: 8px;
 		box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+	}
+
+	.site-navbar__menu .multi-level {
+		padding: 0;
+		gap: 8px;
+		min-width: 100%;
+		max-height: none;
+		overflow: visible;
+	}
+
+	.site-navbar__menu .multi-level > li {
+		margin: 0 0 8px;
+	}
+
+	.site-navbar__menu .multi-level > li:last-child {
+		margin-bottom: 0;
+	}
+
+	.site-navbar__menu .multi-level > li > a {
+		font-size: 13px;
+		padding: 12px 14px;
+		margin-bottom: 0;
 	}
 
 	.site-header__hotline {

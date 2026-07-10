@@ -85,6 +85,57 @@
 	<script src="<?php echo base_url() ?>assets/frontend/js/jquery.min.js"></script>
 	<script src="<?php echo base_url() ?>assets/frontend/js/bootstrap.min.js"></script>
 	<script src="<?php echo base_url() ?>assets/frontend/js/jquery.fancybox.min.js"></script>
+	<script>
+		(function ($) {
+			function isMobileMenu() {
+				if (window.matchMedia) {
+					return window.matchMedia('(max-width: 767px)').matches;
+				}
+				return window.innerWidth <= 767;
+			}
+
+			$(document).on('click', '.site-navbar__menu > li.dropdown > a.dropdown-toggle', function (e) {
+				if (!isMobileMenu()) {
+					return;
+				}
+
+				e.preventDefault();
+				e.stopPropagation();
+				if (e.stopImmediatePropagation) {
+					e.stopImmediatePropagation();
+				}
+
+				var $trigger = $(this);
+				var $parent = $trigger.parent('li.dropdown');
+				var $submenu = $parent.children('.dropdown-menu');
+				var willOpen = !$parent.hasClass('open');
+
+				$parent
+					.siblings('.dropdown.open')
+					.removeClass('open')
+					.children('.dropdown-menu')
+					.stop(true, true)
+					.slideUp(160);
+
+				$parent.toggleClass('open', willOpen);
+				$trigger.attr('aria-expanded', willOpen ? 'true' : 'false');
+				$submenu.stop(true, true)[willOpen ? 'slideDown' : 'slideUp'](160);
+			});
+
+			$('#nav-open-btn').on('hide.bs.collapse', function () {
+				$(this).find('li.dropdown.open').removeClass('open').children('.dropdown-menu').hide();
+				$(this).find('a.dropdown-toggle').attr('aria-expanded', 'false');
+			});
+
+			$(window).on('resize', function () {
+				if (!isMobileMenu()) {
+					$('#nav-open-btn').find('li.dropdown.open').removeClass('open');
+					$('#nav-open-btn').find('.dropdown-menu').removeAttr('style');
+					$('#nav-open-btn').find('a.dropdown-toggle').attr('aria-expanded', 'false');
+				}
+			});
+		})(jQuery);
+	</script>
 
 </body>
 

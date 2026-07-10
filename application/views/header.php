@@ -9,7 +9,7 @@
 						<span><i class="fa fa-navicon"></i></span>
 					</button>
 					<a class="navbar-brand site-header__logo" href="<?php echo base_url() ?>">
-						<img src="<?php echo base_url() ?>assets/frontend/img/compact_logo2.png" alt="Viet Compact">
+						<img src="<?php echo base_url() ?>assets/frontend/img/compact_logo2.svg" alt="Compact">
 					</a>
 				</div>
 
@@ -18,7 +18,7 @@
 						<li class="<?php echo(strtolower($this->router->fetch_class()) == 'home' ? 'active' : '')?>"><a href="<?php echo base_url() ?>">Trang chủ</a></li>
 						<li class="<?php echo(strtolower($this->router->fetch_class()) == 'about' ? 'active' : '')?>"><a href="<?php echo base_url().'gioi-thieu' ?>">Giới thiệu</a></li>
 						<li class="dropdown megamenu <?php echo(strtolower($this->router->fetch_class()) == 'quotation' ? 'active' : '')?>">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Báo giá</a>
+							<a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Báo giá</a>
 							<div class="dropdown-menu animated-2s fadeInUpHalf">
 								<ul class="home-links home-links--text">
 									<li>
@@ -43,7 +43,7 @@
 							</div>
 						</li>
 						<li class="dropdown <?php echo(strtolower($this->router->fetch_class()) == 'product' ? 'active' : '')?>">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sản phẩm</a>
+							<a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Sản phẩm</a>
 							<ul class="dropdown-menu multi-level">
 								<?php foreach ($all_categories as $index => $item) { ?>
 									<li><a href="<?php echo base_url() .'danh-muc-san-pham/'. $item['name_unsigned'] ?>"><?php echo $item['name'] ?></a></li>
