@@ -171,36 +171,62 @@
         <p>Tập trung vào các dòng sản phẩm chủ lực cho công trình vệ sinh và nội thất kỹ thuật.</p>
         <hr>
       </div>
-      <ul class="nav nav-tabs nav-bars margin-bottom-40" role="tablist">
-        <li role="presentation" class="active"><a href="#product" aria-controls="product" role="tab" data-toggle="tab">Sản Phẩm</a></li>
+
+      <?php
+      // Group products by category
+      if (is_array($products_on_home) && !empty($products_on_home)) {
+        $grouped_products = [];
+        foreach ($products_on_home as $item) {
+          $category = $item['category_name'];
+          if (!isset($grouped_products[$category])) {
+            $grouped_products[$category] = [];
+          }
+          $grouped_products[$category][] = $item;
+        }
+        
+        $categories = array_keys($grouped_products);
+      ?>
+
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs mb-4" id="productTabs" role="tablist">
+        <?php $first = true; ?>
+        <?php foreach ($categories as $cat_index => $category): ?>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link <?php echo $first ? 'active' : ''; ?>" id="product-tab-<?php echo $cat_index; ?>" data-toggle="tab" href="#product-pane-<?php echo $cat_index; ?>" role="tab" aria-controls="product-pane-<?php echo $cat_index; ?>" aria-selected="<?php echo $first ? 'true' : 'false'; ?>">
+              <?php echo $category; ?>
+            </a>
+          </li>
+          <?php $first = false; ?>
+        <?php endforeach; ?>
       </ul>
 
       <!-- Tab panes -->
-      <div class="tab-content">
-        <!-- Featured -->
-        <div role="tabpanel" class="tab-pane active fade in" id="product">
-          <!-- Items Slider -->
-
-          <div class="item-col-4">
-            <?php foreach ($products_on_home as $index => $item) { ?>
-              <!-- Product -->
-              <div class="product">
-                <article>
-                  <a href="<?php echo base_url() . 'san-pham/' . $item['name_unsigned'] ?>" class="tittle-img">
-                    <img class="img-responsive" src="<?php echo base_url() . IMAGE_UPLOAD_PATH . $item['thumb'] ?>" alt="product-img">
-                  </a>
-                  <!-- Content -->
-                  <span class="tag"><?php echo $item['category_name'] ?></span> <a href="<?php echo base_url() . 'san-pham/' . $item['name_unsigned'] ?>" class="tittle"><?php echo $item['name'] ?></a>
-                  <!-- Reviews -->
-                  <div class="price"><?php echo ($item['price'] == '' ? "Liên hệ" : number_format($item['price'], 0, ',', '.') . " VND") ?> </div>
-                </article>
-              </div>
-            <?php } ?>
-
+      <div class="tab-content" id="productTabContent">
+        <?php $first = true; ?>
+        <?php foreach ($categories as $cat_index => $category): ?>
+          <div class="tab-pane fade <?php echo $first ? 'show active' : ''; ?>" id="product-pane-<?php echo $cat_index; ?>" role="tabpanel" aria-labelledby="product-tab-<?php echo $cat_index; ?>">
+            <div class="item-col-4">
+              <?php foreach ($grouped_products[$category] as $item) { ?>
+                <!-- Product -->
+                <div class="product">
+                  <article>
+                    <a href="<?php echo base_url() . 'san-pham/' . $item['name_unsigned'] ?>" class="tittle-img">
+                      <img class="img-responsive" src="<?php echo base_url() . IMAGE_UPLOAD_PATH . $item['thumb'] ?>" alt="product-img">
+                    </a>
+                    <!-- Content -->
+                    <span class="tag"><?php echo $item['category_name'] ?></span> <a href="<?php echo base_url() . 'san-pham/' . $item['name_unsigned'] ?>" class="tittle"><?php echo $item['name'] ?></a>
+                    <!-- Reviews -->
+                    <div class="price"><?php echo ($item['price'] == '' ? "Liên hệ" : number_format($item['price'], 0, ',', '.') . " VND") ?> </div>
+                  </article>
+                </div>
+              <?php } ?>
+            </div>
           </div>
-
-        </div>
+          <?php $first = false; ?>
+        <?php endforeach; ?>
       </div>
+
+      <?php } ?>
     </div>
   </section>
 
