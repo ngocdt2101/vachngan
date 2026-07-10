@@ -1,205 +1,216 @@
 
-  <!--Details Description  Section-->
-  <section class="details-description">
-  	<div class="container">
-  		<div class="about-details">
-  			<div class="about-headings">
-  				<div class="author-img">
-  					<img src="<?php echo base_url() . IMAGE_UPLOAD_PATH . $product['thumb'] ?>" alt="authorimg">
-  				</div>
-  				<div class="authordetails">
-  					<h5><?php echo $product['name'] ?></h5>
-  					<p><?php echo $product['description'] ?></p>
-  				</div>
-  			</div>
-  			<div class="rate-details">
-  				<h2 style="color: #c10037;">
-  					<?php if ($product['price']) { ?>
-  						<?php echo number_format($product['price'], 0, ",", ".") ?> VND</span></span>
-  					<?php } else { ?>
-  						Liên hệ
-  					<?php } ?>
-  				</h2>
-  			</div>
-  		</div>
-  		<div class="descriptionlinks">
-  			<div class="row">
-  				<div class="col-lg-9">
-  					<ul>
-						<li><a href="javascript:void(0);"><i class="fa fa-share-alt"></i> Chia sẻ</a></li>
-						<li><a href="javascript:void(0);"><i class="fa fa-comment"></i> Đánh giá</a></li>
-						<li><a href="javascript:void(0);"><i class="fa fa-flag"></i>Báo cáo </a></li>
-						<li><a href="javascript:void(0);"><i class="fa fa-heart"></i> Lưu</a></li>
-  					</ul>
-  				</div>
-  				<div class="col-lg-3">
-  					<div class="callnow">
-						<a href="tel:<?php echo $company['hotline'] ?>"> <i class="fa fa-phone"></i> Call Now</a>
-  					</div>
-  				</div>
-  			</div>
-  		</div>
-  	</div>
-  </section>
-  <!--/Details Description  Section-->
+<!-- Breadcrumb Navigation -->
+<div class="breadcrumb-section">
+	<div class="container">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb-list">
+				<li><a href="<?php echo base_url() ?>"><i class="fa fa-home"></i> Trang chủ</a></li>
+				<li><a href="<?php echo base_url() . $product['category_name_unsigned'] ?>"><i class="fa fa-cube"></i> <?php echo $product['category_name'] ?></a></li>
+				<li class="active"><?php echo $product['name'] ?></li>
+			</ol>
+		</nav>
+	</div>
+</div>
 
-  <!--Details Main  Section-->
-  <div class="details-main-wrapper">
-  	<div class="container">
-  		<div class="row">
-  			<div class="col-lg-9">
-  				<div class="card ">
-  					<div class="card-header">
-  						<span class="bar-icon">
-  							<span></span>
-  							<span></span>
-  							<span></span>
-  						</span>
-  						<h4>Mô tả sản phẩm</h4>
-  					</div>
-  					<div class="card-body">
-  						<?php echo $product['content'] ?>
-  					</div>
-  				</div>
+<!-- Product Hero Section -->
+<section class="product-hero">
+	<div class="container">
+		<div class="product-hero-content">
+			<!-- Product Image -->
+			<div class="product-hero__image">
+				<div class="product-image-wrapper">
+					<img src="<?php echo base_url() . IMAGE_UPLOAD_PATH . $product['thumb'] ?>" alt="<?php echo $product['name'] ?>" class="img-responsive">
+				</div>
+			</div>
 
-  				<!--Gallery Section-->
-  				<div class="card gallery-section ">
-  					<div class="card-header ">
-						<img src="<?php echo base_url() ?>assets/frontend/img/galleryicon.svg" alt="gallery">
-  						<h4>Hình ảnh thực tế</h4>
-  					</div>
-  					<div class="card-body">
-  						<div class="gallery-content">
-  							<div class="row">
-  								<div class="col-lg-3 col-md-3 col-sm-3">
-  									<div class="gallery-widget">
-  										<a href="<?php echo base_url() . IMAGE_UPLOAD_PATH . $product['avatar'] ?>" data-fancybox="gallery1">
-  											<img class="img-fluid" alt="Image" src="<?php echo base_url() . IMAGE_UPLOAD_PATH . $product['thumb'] ?>">
-  										</a>
-  									</div>
-  								</div>
+			<!-- Product Info -->
+			<div class="product-hero__info">
+				<div class="product-badge">
+					<span class="badge-category"><i class="fa fa-tag"></i> <?php echo $product['category_name'] ?></span>
+				</div>
 
-  								<?php foreach ($images as $key => $image) { ?>
+				<h1><?php echo $product['name'] ?></h1>
+				
+				<p class="product-description"><?php echo $product['description'] ?></p>
 
-  									<div class="col-lg-3 col-md-3 col-sm-3">
-  										<div class="gallery-widget">
-  											<a href="<?php echo base_url() . IMAGE_UPLOAD_PATH . $image['name'] ?>" data-fancybox="gallery1">
-  												<img class="img-fluid" alt="Image" src="<?php echo base_url() . IMAGE_UPLOAD_PATH . $image['thumb'] ?>">
-  											</a>
-  										</div>
-  									</div>
-  								<?php } ?>
+				<!-- Price Section -->
+				<div class="product-price-section">
+					<div class="price-label">Giá:</div>
+					<div class="price-value">
+						<?php if ($product['price']) { ?>
+							<span class="price-number"><?php echo number_format($product['price'], 0, ",", ".") ?></span>
+							<span class="price-currency">VND</span>
+						<?php } else { ?>
+							<span class="price-contact">Liên hệ</span>
+						<?php } ?>
+					</div>
+				</div>
 
-  							</div>
-  						</div>
-  					</div>
-  				</div>
-  				<!--/Gallery Section-->
+				<!-- Action Buttons -->
+				<div class="product-actions">
+					<a href="tel:<?php echo isset($company['hotline']) ? $company['hotline'] : '#' ?>" class="btn btn-primary-gradient">
+						<i class="fa fa-phone"></i> Liên hệ ngay
+					</a>
+					<a href="<?php echo base_url() . 'lien-he' ?>" class="btn btn-secondary-outline">
+						<i class="fa fa-envelope"></i> Gửi yêu cầu
+					</a>
+				</div>
 
+				<!-- Share & Favorite -->
+				<div class="product-meta">
+					<a href="javascript:void(0);" class="meta-link"><i class="fa fa-share-alt"></i> Chia sẻ</a>
+					<a href="javascript:void(0);" class="meta-link"><i class="fa fa-heart"></i> Lưu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
-  				<!-- Related  Section-->
-  				<div class="card related-sec  mb-0">
-  					<div class="card-header  align-items-center">
-						<img src="<?php echo base_url() ?>assets/frontend/img/icons/icons-11.png" alt="gallery">
-  						<h4>Sản phẩm liên quan</h4>
-  					</div>
-  					<div class="card-body latestad-section grid-view featured-slider" style="background: white;">
-  						<div class="container" style="max-width: 100%;">
-  							<div class="lateestads-content">
-  								<div class="row">
-  									<?php foreach ($related_products as $item) { ?>
-  										<div class="col-lg-4 col-md-6 col-sm-6 d-flex">
-  											<div class="card aos flex-fill" data-aos="fade-up">
-  												<div class="blog-widget">
-  													<div class="blog-img">
-  														<a href="<?php echo base_url() . 'san-pham/' . $item['name_unsigned'] ?>">
-  															<img src="<?php echo base_url() . IMAGE_UPLOAD_PATH . $item['thumb'] ?>" class="img-product" alt="blog-img">
-  														</a>
-  													</div>
-  													<div class="bloglist-content">
-  														<div class="card-body" style="padding: 15px;">
-  															<div class="blogfeaturelink" style="margin: 0px 0 15px 0;">
-  																<div class="blog-features">
-																	<a href="javascript:void(0)"><span> <i class="fa fa-circle"></i> <?php echo $item['category_name'] ?> </span></a>
-  																</div>
-  															</div>
-  															<h6 style="white-space: wrap;"><a href="<?php echo base_url() . 'san-pham/' . $item['name_unsigned'] ?>"><?php echo $item['name'] ?></a></h6>
-  															<div class="amount-details">
-  																<div class="amount">
-  																	<span class="validrate"><?php echo ($item['price'] == '' ? "Liên hệ" : number_format($item['price'], 0, ',', '.')) ?></span>
-  																</div>
-  															</div>
-  														</div>
-  													</div>
-  												</div>
-  											</div>
-  										</div>
-  									<?php } ?>
-  								</div>
-  							</div>
-  						</div>
-  					</div>
-  				</div>
-  				<!--/Review Section-->
-  			</div>
+<!-- Main Content Section -->
+<section class="product-details padding-top-60 padding-bottom-60">
+	<div class="container">
+		<div class="row">
+			<!-- Main Content -->
+			<div class="col-md-9">
+				<!-- Description Card -->
+				<div class="detail-content-card">
+					<div class="card-header-custom">
+						<h3><i class="fa fa-file-text"></i> Mô tả sản phẩm</h3>
+					</div>
+					<div class="post-content">
+						<?php echo $product['content'] ?>
+					</div>
+				</div>
 
-  			<div class="col-lg-3 theiaStickySidebar">
-  				<div class="rightsidebar">
-  					<div class="card">
-						<h4><img src="<?php echo base_url() ?>assets/frontend/img/details-icon.svg" alt="details-icon"> Thông tin sản phẩm</h4>
-  						<ul>
-  							<li>Giá
-  								<span style="color: #c10037; font-size: 20px;">
-  									<?php if ($product['price']) { ?>
-  										<?php echo number_format($product['price'], 0, ",", ".") ?>
-  									<?php } else { ?>
-  										Liên hệ
-  									<?php } ?>
-  								</span>
-  							</li>
-  							<li>Đơn vị tiền <span>VNĐ</span></li>
-  							<li>Đơn vị tính <span></span></li>
-  							<li>Loại <span><?php echo $product['category_name'] ?></span></li>
-  							<li>Quy cách <span></span></li>
-  						</ul>
-  					</div>
-  					<div class="card">
-						<h4><img src="<?php echo base_url() ?>assets/frontend/img/breifcase.svg" alt=""> Thông tin liên hệ</h4>
-  						<div class="map-details">
-  							<ul class="info-list">
-								<li><i class="fa fa-map-marker"></i> <?php echo $company['address'] ?></li>
-								<li><i class="fa fa-phone"></i> <?php echo $company['hotline'] ?></li>
-								<li><i class="fa fa-envelope"></i> <?php echo $company['email'] ?></li>
-								<li><img src="<?php echo base_url() ?>assets/frontend/img/website.svg" alt="website"> <?php echo $_SERVER['HTTP_HOST'] ?></li>
-  								<li class="socialicons pb-0">
-  									<a href="javascript:void(0)"><i class="fab fa-facebook-f"></i> </a>
-  									<a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
-  									<a href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
-  									<a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i></a>
-  								</li>
-  							</ul>
-  						</div>
-  					</div>
-  					<div class="card mb-0">
-						<h4> <i class="fa fa-phone"></i> Đăng kí </h4>
-  						<form class="contactbusinessform">
-  							<div class="form-group">
-  								<input type="text" class="form-control" placeholder="Name">
-  							</div>
-  							<div class="form-group">
-  								<input type="email" class="form-control" placeholder="Email Address">
-  							</div>
-  							<div class="form-group">
-  								<textarea rows="6" class="form-control" placeholder="Message"></textarea>
-  							</div>
-  							<div class="submit-section">
-  								<button onclick="return false;" class="btn btn-primary submit-btn" type="submit">Send Message</button>
-  							</div>
-  						</form>
-  					</div>
-  				</div>
-  			</div>
-  		</div>
-  	</div>
-  </div>
-  <!-- /Details Main Section -->
+				<!-- Gallery Section -->
+				<?php if (!empty($images)) { ?>
+					<div class="detail-content-card">
+						<div class="card-header-custom">
+							<h3><i class="fa fa-images"></i> Hình ảnh thực tế</h3>
+						</div>
+						<div class="gallery-section-wrapper">
+							<div class="gallery-grid">
+								<!-- Main featured image -->
+								<div class="gallery-item gallery-featured">
+									<a href="<?php echo base_url() . IMAGE_UPLOAD_PATH . $product['avatar'] ?>" data-fancybox="product-gallery">
+										<img src="<?php echo base_url() . IMAGE_UPLOAD_PATH . $product['avatar'] ?>" alt="<?php echo $product['name'] ?>" class="img-responsive">
+										<div class="gallery-overlay">
+											<i class="fa fa-search-plus"></i>
+										</div>
+									</a>
+								</div>
+
+								<!-- Thumbnail images -->
+								<?php foreach ($images as $image) { ?>
+									<div class="gallery-item">
+										<a href="<?php echo base_url() . IMAGE_UPLOAD_PATH . $image['name'] ?>" data-fancybox="product-gallery">
+											<img src="<?php echo base_url() . IMAGE_UPLOAD_PATH . $image['thumb'] ?>" alt="<?php echo $product['name'] ?>" class="img-responsive">
+											<div class="gallery-overlay">
+												<i class="fa fa-search-plus"></i>
+											</div>
+										</a>
+									</div>
+								<?php } ?>
+							</div>
+						</div>
+					</div>
+				<?php } ?>
+			</div>
+
+			<!-- Sidebar -->
+			<div class="col-md-3">
+				<!-- Product Info Card -->
+				<div class="sidebar-card">
+					<div class="sidebar-card__header">
+						<i class="fa fa-info-circle"></i>
+						<h5>Thông tin sản phẩm</h5>
+					</div>
+					<div class="sidebar-card__body">
+						<div class="info-list-custom">
+							<div class="info-item">
+								<span class="info-label">Giá:</span>
+								<span class="info-value">
+									<?php if ($product['price']) { ?>
+										<?php echo number_format($product['price'], 0, ",", ".") ?> VND
+									<?php } else { ?>
+										Liên hệ
+									<?php } ?>
+								</span>
+							</div>
+							<div class="info-item">
+								<span class="info-label">Loại:</span>
+								<span class="info-value"><?php echo $product['category_name'] ?></span>
+							</div>
+							<div class="info-item">
+								<span class="info-label">Đơn vị tiền:</span>
+								<span class="info-value">VND</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Contact Info Card -->
+				<div class="sidebar-card">
+					<div class="sidebar-card__header">
+						<i class="fa fa-phone"></i>
+						<h5>Thông tin liên hệ</h5>
+					</div>
+					<div class="sidebar-card__body">
+						<div class="contact-list-custom">
+							<a href="tel:<?php echo $company['hotline'] ?>" class="contact-item">
+								<i class="fa fa-phone"></i> <?php echo $company['hotline'] ?>
+							</a>
+							<a href="mailto:<?php echo $company['email'] ?>" class="contact-item">
+								<i class="fa fa-envelope"></i> <?php echo $company['email'] ?>
+							</a>
+							<div class="contact-item">
+								<i class="fa fa-map-marker"></i> <?php echo $company['address'] ?>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- CTA Card -->
+				<div class="sidebar-card cta-card">
+					<div class="sidebar-card__header">
+						<i class="fa fa-comments"></i>
+						<h5>Liên hệ ngay</h5>
+					</div>
+					<div class="sidebar-card__body">
+						<a href="tel:<?php echo isset($company['hotline']) ? $company['hotline'] : '#' ?>" class="btn btn-primary-gradient btn-block" style="display: block; text-align: center; width: 100%; margin-bottom: 10px;">
+							<i class="fa fa-phone"></i> Gọi ngay
+						</a>
+						<a href="<?php echo base_url() . 'lien-he' ?>" class="btn btn-secondary-gradient btn-block" style="display: block; text-align: center; width: 100%;">
+							<i class="fa fa-envelope"></i> Gửi yêu cầu
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+						<!-- Related Products Section -->
+				<?php if (!empty($related_products)) { ?>
+					<div class="detail-content-card">
+						<div class="card-header-custom">
+							<h3><i class="fa fa-cubes"></i> Sản phẩm liên quan</h3>
+						</div>
+						<div class="related-products-wrapper">
+							<div class="item-col-4">
+								<?php foreach ($related_products as $item) { ?>
+									<div class="product">
+										<article>
+											<a href="<?php echo base_url() . 'san-pham/' . $item['name_unsigned'] ?>" class="tittle-img">
+												<img class="img-responsive" src="<?php echo base_url() . IMAGE_UPLOAD_PATH . $item['thumb'] ?>" alt="<?php echo $item['name'] ?>">
+											</a>
+											<span class="tag"><?php echo $item['category_name'] ?></span>
+											<a href="<?php echo base_url() . 'san-pham/' . $item['name_unsigned'] ?>" class="tittle"><?php echo $item['name'] ?></a>
+											<div class="price"><?php echo ($item['price'] == '' ? "Liên hệ" : number_format($item['price'], 0, ',', '.') . " VND") ?></div>
+										</article>
+									</div>
+								<?php } ?>
+							</div>
+						</div>
+					</div>
+				<?php } ?>
+	</div>
+</section>
