@@ -56,7 +56,7 @@
 					<div class="site-navbar__actions">
 						<a class="site-header__hotline" href="tel:<?php echo str_replace(' ', '', str_replace('-', '', str_replace('.', '', $company['hotline']))) ?>">
 							<span>Hotline</span>
-							<strong><?php echo str_replace(' ', '', str_replace('-', '', str_replace('.', '', $company['hotline']))) ?></strong>
+							<strong><?php echo $company['hotline'] ?></strong>
 						</a>
 					</div>
 				</div>
