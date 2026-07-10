@@ -237,7 +237,7 @@ a:focus {
 .site-header__hotline {
 	display: inline-flex;
 	flex-direction: column;
-	align-items: flex-end;
+	align-items: flex-start;
 	padding: 10px 16px;
 	border-radius: 18px;
 	background: linear-gradient(135deg, var(--vc-primary), #35a07f);
