@@ -4,7 +4,7 @@
   <section class="home-intro-shell">
     <div class="container">
       <div class="section-heading section-heading--compact text-center">
-        <h2>Công trình tiêu biểu</h2>
+        <h2>DỰ ÁN ĐÃ THI CÔNG</h2>
         <p>Thi công nhanh, đồng bộ phụ kiện, bảo hành rõ ràng và tối ưu chi phí cho công trình.</p>
         <hr>
       </div>
