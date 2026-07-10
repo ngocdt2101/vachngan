@@ -1102,7 +1102,7 @@ a:focus {
 .about-info p,
 .post-content,
 .breadcrumb-title {
-	color: var(--vc-text);
+	color: #212222;
 	line-height: 1.8;
 	font-size: 16px;
 }
@@ -1117,10 +1117,11 @@ a:focus {
 	border-radius: 20px;
 	border-left: 4px solid var(--vc-primary);
 	padding: 40px;
-	line-height: 1.9;
-	font-size: 16px;
-	color: #333;
 	box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.post-content * {
+	all: revert;
 }
 
 .map-area iframe {
