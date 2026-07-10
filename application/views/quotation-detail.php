@@ -4,7 +4,7 @@
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb-list">
 				<li><a href="<?php echo base_url() ?>"><i class="fa fa-home"></i> Trang chủ</a></li>
-				<li><a href="<?php echo base_url() . 'bao-gia' ?>"><i class="fa fa-file-text"></i> Báo giá</a></li>
+				<li><i class="fa fa-file-text"></i> Báo giá</li>
 				<li class="active"><?php echo $quotation['name'] ?></li>
 			</ol>
 		</nav>

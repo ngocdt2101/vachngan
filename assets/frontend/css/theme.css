@@ -1353,7 +1353,6 @@ a:focus {
 	padding: 80px 0 60px;
 	background: linear-gradient(135deg, rgba(43, 108, 176, 0.08), rgba(53, 160, 127, 0.08));
 	border-radius: 32px;
-	margin-bottom: 60px;
 	position: relative;
 	overflow: hidden;
 }
@@ -1738,8 +1737,8 @@ a:focus {
 }
 
 .related-item__title {
-	font-size: 14px;
-	font-weight: 600;
+	font-size: 13px;
+	font-weight: 500;
 	color: var(--vc-ink);
 	text-decoration: none;
 	line-height: 1.4;
