@@ -14,7 +14,7 @@ $slideList = (is_array($slides) && !empty($slides)) ? $slides : [];
           </div>
           <div class="hero-main__shade"></div>
           <div class="hero-main__content">
-            <span class="hero-main__eyebrow">Viet Compact</span>
+            <span class="hero-main__eyebrow">Tấm Compact</span>
             <h1>CHUYÊN GIA THI CÔNG VÁCH NGĂN VỆ SINH COMPACT</h1>
             <p>Giải pháp bền bỉ, thẩm mỹ cao, chịu nước 100% cho mọi công trình.</p>
             <div class="hero-main__actions">
