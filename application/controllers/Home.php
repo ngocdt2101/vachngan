@@ -17,33 +17,20 @@ class Home extends Frontend_Controller
 		// Get commom data
 		$data = $this->data;
 
-		// Get banner
-		unset($params);
-		$params['type'] = 'banner1';
-		$params['is_enable'] = 1;
-		$banners = $this->image_model->select($params);
-		$data['banner']['banner1'] = $banners[0];
+		// Get banners for home intro section (loopable array)
+		$data['home_banners'] = [];
+		for ($i = 1; $i <= 4; $i++) {
+			$params = ['type' => 'banner' . $i, 'is_enable' => 1];
+			$banners = $this->image_model->select($params);
+			if (!empty($banners)) {
+				$data['home_banners'][] = $banners[0];
+			}
+		}
 
-		// Get banner
-		unset($params);
-		$params['type'] = 'banner2';
-		$params['is_enable'] = 1;
-		$banners = $this->image_model->select($params);
-		$data['banner']['banner2'] = $banners[0];
-
-		// Get banner
-		unset($params);
-		$params['type'] = 'banner3';
-		$params['is_enable'] = 1;
-		$banners = $this->image_model->select($params);
-		$data['banner']['banner3'] = $banners[0];
-
-		// Get banner
-		unset($params);
-		$params['type'] = 'banner4';
-		$params['is_enable'] = 1;
-		$banners = $this->image_model->select($params);
-		$data['banner']['banner4'] = $banners[0];
+		// Keep old structure for backward compatibility with other views
+		foreach ($data['home_banners'] as $idx => $banner) {
+			$data['banner']['banner' . ($idx + 1)] = $banner;
+		}
 
 		// Set banner
 		$data['is_show_slide'] = true;

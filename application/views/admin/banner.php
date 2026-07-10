@@ -131,13 +131,6 @@
 					</div>
 
 					<div class="row form-group">
-						<label class="col-sm-3 control-label">Link</label>
-						<div class="col-sm-9">
-							<input id="banner3-link" type="text" class="form-control" value="<?php echo $banner3['link'] ?>">
-						</div>
-					</div>
-
-					<div class="row form-group">
 						<label class="col-sm-3 control-label">Tiêu đề</label>
 						<div class="col-sm-9">
 							<textarea id="banner3-title" class="form-control" rows="2"><?php echo $banner3['title'] ?></textarea>
@@ -148,6 +141,13 @@
 						<label class="col-sm-3 control-label">Mô tả</label>
 						<div class="col-sm-9">
 							<textarea id="banner3-description" class="form-control" rows="2"><?php echo $banner3['description'] ?></textarea>
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<label class="col-sm-3 control-label">Link</label>
+						<div class="col-sm-9">
+							<input id="banner3-link" type="text" class="form-control" value="<?php echo $banner3['link'] ?>">
 						</div>
 					</div>
 					<div class="row form-group">
@@ -181,13 +181,6 @@
 				</div>
 
 				<div class="row form-group">
-					<label class="col-sm-3 control-label">Link</label>
-					<div class="col-sm-9">
-						<input id="banner4-link" type="text" class="form-control" value="<?php echo $banner4['link'] ?>">
-					</div>
-				</div>
-
-				<div class="row form-group">
 					<label class="col-sm-3 control-label">Tiêu đề</label>
 					<div class="col-sm-9">
 						<textarea id="banner4-title" class="form-control" rows="2"><?php echo $banner4['title'] ?></textarea>
@@ -200,6 +193,14 @@
 						<textarea id="banner4-description" class="form-control" rows="2"><?php echo $banner4['description'] ?></textarea>
 					</div>
 				</div>
+
+				<div class="row form-group">
+					<label class="col-sm-3 control-label">Link</label>
+					<div class="col-sm-9">
+						<input id="banner4-link" type="text" class="form-control" value="<?php echo $banner4['link'] ?>">
+					</div>
+				</div>
+
 				<div class="row form-group">
 					<div class="col-xs-12" style="display: flex; justify-content: center;">
 						<button class="btn btn-success" style="margin-left: 10px;" onclick="UpdateBannerInfo('banner4', $('#banner4-link').val(), $('#banner4-title').val(), $('#banner4-description').val())">&nbsp Lưu &nbsp</button>

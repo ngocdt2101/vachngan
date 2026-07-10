@@ -1,5 +1,34 @@
 <!-- Content -->
 <div id="content">
+
+  <section class="home-intro-shell">
+    <div class="container">
+      <div class="section-heading section-heading--compact text-center">
+        <h2>Công trình tiêu biểu</h2>
+        <p>Thi công nhanh, đồng bộ phụ kiện, bảo hành rõ ràng và tối ưu chi phí cho công trình.</p>
+        <hr>
+      </div>
+
+      <?php if (is_array($home_banners) && !empty($home_banners)): ?>
+        <div class="feature-grid">
+          <?php foreach ($home_banners as $banner): ?>
+            <div class="feature-card">
+              <div class="feature-card__icon hexagon">
+                <?php if (!empty($banner['thumb'])): ?>
+                  <img src="<?php echo base_url() . BANNER_UPLOAD_PATH . $banner['thumb'] ?>" 
+                       alt="<?php echo !empty($banner['title']) ? strip_tags($banner['title']) : 'Banner' ?>" 
+                       class="hexagon__img">
+                <?php endif; ?>
+              </div>
+              <h3><?php echo !empty($banner['title']) ? $banner['title'] : 'Chuyên nghiệp'; ?></h3>
+              <p><?php echo !empty($banner['description']) ? $banner['description'] : ''; ?></p>
+            </div>
+          <?php endforeach; ?>
+        </div>
+      <?php endif; ?>
+    </div>
+  </section>
+
   <section class="home-intro-shell">
     <div class="container">
       <div class="section-heading section-heading--compact text-center">
@@ -8,6 +37,7 @@
         <p>Thi công nhanh, đồng bộ phụ kiện, bảo hành rõ ràng và tối ưu chi phí cho công trình.</p>
         <hr>
       </div>
+
       <div class="feature-grid">
         <div class="feature-card">
           <div class="feature-card__icon"><i class="fa fa-tint"></i></div>
