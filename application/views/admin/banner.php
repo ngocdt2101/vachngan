@@ -18,13 +18,13 @@
 				<div class="panel-body" style="padding-left: 20px;">
 
 					<div class="row" style="margin-bottom: 10px;">
-						<input type="file" class="form-control file2 inline btn btn-success" onchange="UploadImage(this, 'banner1', 1000, 760)" data-label="<i class='glyphicon glyphicon-circle-arrow-up'></i> &nbsp;Select Image" />
+						<input type="file" class="form-control file2 inline btn btn-success" onchange="UploadImage(this, 'banner1', 500, 500)" data-label="<i class='glyphicon glyphicon-circle-arrow-up'></i> &nbsp;Select Image" />
 					</div>
 					<div class="row" style="margin-bottom: 50px;">
 						<?php if (isset($banner1)) { ?>
-							<img src="<?php echo base_url() . BANNER_UPLOAD_PATH . $banner1['thumb'] ?>" class="img-rounded" style="width: 500px; height: 380px;">
+							<img src="<?php echo base_url() . BANNER_UPLOAD_PATH . $banner1['thumb'] ?>" class="img-rounded" style="width: 200px; height: 200px;">
 						<?php } else { ?>
-							<img src="https://via.placeholder.com/840x490" class="img-rounded" style="width: 500px; height: 380px;">
+							<img src="https://via.placeholder.com/200x200" class="img-rounded" style="width: 200px; height: 200px;">
 						<?php } ?>
 					</div>
 
@@ -60,7 +60,7 @@
 			<div class="panel panel-primary" data-collapsed="0">
 				<div class="panel-heading">
 					<div class="panel-title">
-					Cập nhật banner Trang Chủ (Vì Sao Chọn Chúng Tôi)
+					Cập nhật banner Trang Chủ 2
 					</div>
 					<div class="panel-options">
 						<a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a>
@@ -69,13 +69,13 @@
 				<div class="panel-body" style="padding-left: 20px;">
 
 					<div class="row" style="margin-bottom: 10px;">
-						<input type="file" class="form-control file2 inline btn btn-success" onchange="UploadImage(this, 'banner2', 600, 600)" data-label="<i class='glyphicon glyphicon-circle-arrow-up'></i> &nbsp;Select Image" />
+						<input type="file" class="form-control file2 inline btn btn-success" onchange="UploadImage(this, 'banner2', 500, 500)" data-label="<i class='glyphicon glyphicon-circle-arrow-up'></i> &nbsp;Select Image" />
 					</div>
 					<div class="row" style="margin-bottom: 50px;">
 						<?php if (isset($banner2)) { ?>
-							<img src="<?php echo base_url() . BANNER_UPLOAD_PATH . $banner2['thumb'] ?>" class="img-rounded" style="width: 600px; height: 600px;">
+							<img src="<?php echo base_url() . BANNER_UPLOAD_PATH . $banner2['thumb'] ?>" class="img-rounded" style="width: 200px; height: 200px;">
 						<?php } else { ?>
-							<img src="https://via.placeholder.com/600x600" class="img-rounded" style="width: 600px; height: 600px;">
+							<img src="https://via.placeholder.com/200x200" class="img-rounded" style="width: 200px; height: 200px;">
 						<?php } ?>
 					</div>
 
@@ -111,7 +111,7 @@
 			<div class="panel panel-primary" data-collapsed="0">
 				<div class="panel-heading">
 					<div class="panel-title">
-					Cập nhật banner Trang Chủ (Đăng ký)
+					Cập nhật banner Trang Chủ 3
 					</div>
 					<div class="panel-options">
 						<a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a>
@@ -120,13 +120,13 @@
 				<div class="panel-body" style="padding-left: 20px;">
 
 					<div class="row" style="margin-bottom: 10px;">
-						<input type="file" class="form-control file2 inline btn btn-success" onchange="UploadImage(this, 'banner3', 1000, 1200)" data-label="<i class='glyphicon glyphicon-circle-arrow-up'></i> &nbsp;Select Image" />
+						<input type="file" class="form-control file2 inline btn btn-success" onchange="UploadImage(this, 'banner3', 500, 500)" data-label="<i class='glyphicon glyphicon-circle-arrow-up'></i> &nbsp;Select Image" />
 					</div>
 					<div class="row" style="margin-bottom: 50px;">
 						<?php if (isset($banner3)) { ?>
-							<img src="<?php echo base_url() . BANNER_UPLOAD_PATH . $banner3['thumb'] ?>" class="img-rounded" style="width: 500px; height: 600px;">
+							<img src="<?php echo base_url() . BANNER_UPLOAD_PATH . $banner3['thumb'] ?>" class="img-rounded" style="width: 200px; height: 200px;">
 						<?php } else { ?>
-							<img src="https://via.placeholder.com/500x600" class="img-rounded" style="width: 500px; height: 600px;">
+							<img src="https://via.placeholder.com/200x200" class="img-rounded" style="width: 200px; height: 200px;">
 						<?php } ?>
 					</div>
 
@@ -158,11 +158,10 @@
 				</div>
 			</div>
 
-			<!-- Cập nhật banner trang Giới Thiệu -->
 			<div class="panel panel-primary" data-collapsed="0">
 				<div class="panel-heading">
 					<div class="panel-title">
-						Cập nhật banner trang Giới Thiệu
+						Cập nhật banner trang chủ 4
 					</div>
 					<div class="panel-options">
 						<a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a>
@@ -170,14 +169,40 @@
 				</div>
 				<div class="panel-body" style="padding-left: 20px;">
 					<div class="row" style="margin-bottom: 10px;">
-						<input type="file" class="form-control file2 inline btn btn-success" onchange="UploadImage(this, 'banner4', 1680, 900)" data-label="<i class='glyphicon glyphicon-circle-arrow-up'></i> &nbsp;Select Image" />
+						<input type="file" class="form-control file2 inline btn btn-success" onchange="UploadImage(this, 'banner4', 500, 500)" data-label="<i class='glyphicon glyphicon-circle-arrow-up'></i> &nbsp;Select Image" />
 					</div>
 					<div class="row" style="margin-bottom: 50px;">
 						<?php if (isset($banner4)) { ?>
-							<img src="<?php echo base_url() . BANNER_UPLOAD_PATH . $banner4['thumb'] ?>" class="img-rounded" style="width: 840px; height: 450px;">
+							<img src="<?php echo base_url() . BANNER_UPLOAD_PATH . $banner4['thumb'] ?>" class="img-rounded" style="width: 200px; height: 200px;">
 						<?php } else { ?>
-							<img src="<?php echo base_url() . 'assets/ecome/img/banner/h5_b1.jpg' ?>" class="img-rounded" style="width: 840px; height: 450px;">
+							<img src="<?php echo base_url() . 'assets/ecome/img/banner/h5_b1.jpg' ?>" class="img-rounded" style="width: 200px; height: 200px;">
 						<?php } ?>
+					</div>
+				</div>
+
+				<div class="row form-group">
+					<label class="col-sm-3 control-label">Link</label>
+					<div class="col-sm-9">
+						<input id="banner4-link" type="text" class="form-control" value="<?php echo $banner4['link'] ?>">
+					</div>
+				</div>
+
+				<div class="row form-group">
+					<label class="col-sm-3 control-label">Tiêu đề</label>
+					<div class="col-sm-9">
+						<textarea id="banner4-title" class="form-control" rows="2"><?php echo $banner4['title'] ?></textarea>
+					</div>
+				</div>
+
+				<div class="row form-group">
+					<label class="col-sm-3 control-label">Mô tả</label>
+					<div class="col-sm-9">
+						<textarea id="banner4-description" class="form-control" rows="2"><?php echo $banner4['description'] ?></textarea>
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-xs-12" style="display: flex; justify-content: center;">
+						<button class="btn btn-success" style="margin-left: 10px;" onclick="UpdateBannerInfo('banner4', $('#banner4-link').val(), $('#banner4-title').val(), $('#banner4-description').val())">&nbsp Lưu &nbsp</button>
 					</div>
 				</div>
 			</div>
@@ -227,25 +252,6 @@
 							<img src="<?php echo base_url() . 'assets/ecome/img/banner/h5_b1.jpg' ?>" class="img-rounded" style="width: 840px; height: 450px;">
 						<?php } ?>
 					</div>
-
-					<!-- <div class="row form-group">
-						<label class="col-sm-3 control-label">Tiêu đề</label>
-						<div class="col-sm-9">
-							<textarea id="banner6-title" class="form-control" rows="2"><?php echo $banner6['title'] ?></textarea>
-						</div>
-					</div>
-
-					<div class="row form-group">
-						<label class="col-sm-3 control-label">Mô tả</label>
-						<div class="col-sm-9">
-							<textarea id="banner6-description" class="form-control" rows="2"><?php echo $banner6['description'] ?></textarea>
-						</div>
-					</div>
-					<div class="row form-group">
-						<div class="col-xs-12" style="display: flex; justify-content: center;">
-							<button class="btn btn-success" style="margin-left: 10px;" onclick="UpdateBannerInfo('banner6', '', $('#banner6-title').val(), $('#banner6-description'))">&nbsp Lưu &nbsp</button>
-						</div>
-					</div> -->
 				</div>
 			</div>
 

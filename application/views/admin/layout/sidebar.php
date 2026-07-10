@@ -137,12 +137,12 @@
 							<span class="title">Slide</span>
 						</a>
 					</li>
-					<!-- <li class="<?php if ($this->uri->segment(2) == 'banner') echo 'active' ?>">
+					<li class="<?php if ($this->uri->segment(2) == 'banner') echo 'active' ?>">
 						<a href="<?php echo base_url() ?>admin/banner">
 							<i class="entypo-layout"></i>
 							<span class="title">Banner</span>
 						</a>
-					</li> -->
+					</li>
 				</ul>
 			</li>
 			<li class="<?php if ($this->uri->segment(2) == 'about') echo 'active' ?>">
