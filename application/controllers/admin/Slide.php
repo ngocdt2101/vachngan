@@ -32,6 +32,7 @@ class Slide extends Admin_Controller
 			$config['upload_path'] = SLIDE_UPLOAD_PATH;
 			$config['allowed_types'] = 'jpg|jpeg|png|gif';
 			$config['overwrite'] = false;
+			$config['encrypt_name'] = true;
 
 			//Load upload library
 			$this->load->library('upload', $config);

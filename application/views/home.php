@@ -14,10 +14,18 @@
           <?php foreach ($home_banners as $banner): ?>
             <div class="feature-card">
               <div class="feature-card__icon hexagon">
+                <?php if (!empty($banner['link'])): ?>
+                  <a href="<?php echo base_url() . $banner['link']; ?>" class="hexagon__link" target="_blank">
+                <?php endif; ?>
+                
                 <?php if (!empty($banner['thumb'])): ?>
                   <img src="<?php echo base_url() . BANNER_UPLOAD_PATH . $banner['thumb'] ?>" 
                        alt="<?php echo !empty($banner['title']) ? strip_tags($banner['title']) : 'Banner' ?>" 
                        class="hexagon__img">
+                <?php endif; ?>
+                
+                <?php if (!empty($banner['link'])): ?>
+                  </a>
                 <?php endif; ?>
               </div>
               <h3><?php echo !empty($banner['title']) ? $banner['title'] : 'Chuyên nghiệp'; ?></h3>
