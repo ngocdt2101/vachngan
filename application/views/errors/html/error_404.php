@@ -27,23 +27,23 @@
 
 </head>
 
-<body>
+<body style="background: #fff;">
     <div class="mainwrapper error-page">
-        <div class="content">
+        <div class="content" style="background: #fff;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 mx-auto">
                         <div class="error-wrap">
 
                             <div class="error-logo">
-                                <a href="index.html"><img class="img-fluid" src="<?php echo $domain ?>assets/frontend/img/compact_logo.png" alt="img"></a>
+                                <a href="index.html"><img class="img-fluid" src="<?php echo $domain ?>assets/frontend/img/compact_logo2.svg" alt="img"></a>
                             </div>
 
-                            <h2>Trang bạn truy cập không tồn tại</h2>
+                            <h2 style="color: #12457b;">Trang bạn truy cập không tồn tại</h2>
                             <div class="error-img">
                                 <img class="img-fluid" src="<?php echo $domain ?>assets/frontend/img/404-error.jpg" alt="img">
                             </div>
-                            <a href="<?php echo $domain ?>" class="btn btn-primary rounded-pill">Trở về trang chủ</a>
+                            <a href="<?php echo $domain ?>" class="btn btn-primary rounded-pill" style="background: #2e7d9f;">Trở về trang chủ</a>
                         </div>
                     </div>
                 </div>
