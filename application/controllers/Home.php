@@ -58,7 +58,7 @@ class Home extends Frontend_Controller
 		$data['meta_og']['type'] = 'company';
 		$data['meta_og']['title'] = $data['title'];
 		$data['meta_og']['description'] = $data['meta_description'];
-		$data['meta_og']['image'] = base_url() . 'assets/smarttech/images/logo-4.png';
+		$data['meta_og']['image'] = base_url() . 'assets/frontend/img/logo-4.png';
 
 		$data['subview'] = 'home';
 

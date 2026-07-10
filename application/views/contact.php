@@ -7,7 +7,7 @@
 		<div class="row align-items-center">
 			<div class="col-lg-5 col-md-5">
 				<div class="contactform-img">
-					<img width="300px" src="<?php echo base_url()?>assets/listee/img/contactform-img.svg" class="img-fluid" alt="">
+					<img width="300px" src="<?php echo base_url()?>assets/frontend/img/contactform-img.svg" class="img-fluid" alt="">
 				</div>
 			</div>
 			<div class="col-lg-7 col-md-7">

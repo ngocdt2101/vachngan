@@ -45,17 +45,17 @@
 									<li>
 										<div class="post-author">
 											<div class="post-author-img">
-												<img src="<?php echo base_url() ?>assets/listee/img/profiles/avatar-14.jpg" alt="Post Author">
+												<img src="<?php echo base_url() ?>assets/frontend/img/profiles/avatar-14.jpg" alt="Post Author">
 											</div>
 											<a href="javascript:void(0);" class="mb-0"> <span> Admin </span></a>
 										</div>
 									</li>
-									<li class="date-icon"><i class="fa-solid fa-calendar-days"></i> <?php echo date("M", strtotime($item['updated_at'])) ?> <?php echo date("d", strtotime($item['updated_at'])) ?>, <?php echo date("Y", strtotime($item['updated_at'])) ?> </li>
+									<li class="date-icon"><i class="fa fa-calendar"></i> <?php echo date("M", strtotime($item['updated_at'])) ?> <?php echo date("d", strtotime($item['updated_at'])) ?>, <?php echo date("Y", strtotime($item['updated_at'])) ?> </li>
 								</ul>
 								<h3 class="blog-title"><a href="<?php echo base_url() . 'bao-gia/' . $item['name_unsigned'] ?>"> <?php echo $item['name'] ?> </a>
 								</h3>
 								<p class="blog-description"><?php echo $item['description'] ?></p>
-								<p class="viewlink"><a href="<?php echo base_url() . 'bao-gia/' . $item['name_unsigned'] ?>"> Xem Chi Tiết <i class="feather-arrow-right"></i></a></p>
+								<p class="viewlink"><a href="<?php echo base_url() . 'bao-gia/' . $item['name_unsigned'] ?>"> Xem Chi Tiết <i class="fa fa-arrow-right"></i></a></p>
 							</div>
 						</div>
 					</div>
@@ -90,17 +90,17 @@
 									<li>
 										<div class="post-author">
 											<div class="post-author-img">
-												<img src="<?php echo base_url() ?>assets/listee/img/profiles/avatar-14.jpg" alt="Post Author">
+												<img src="<?php echo base_url() ?>assets/frontend/img/profiles/avatar-14.jpg" alt="Post Author">
 											</div>
 											<a href="javascript:void(0);" class="mb-0"> <span> Admin </span></a>
 										</div>
 									</li>
-									<li class="date-icon"><i class="fa-solid fa-calendar-days"></i> <?php echo date("M", strtotime($item['updated_at'])) ?> <?php echo date("d", strtotime($item['updated_at'])) ?>, <?php echo date("Y", strtotime($item['updated_at'])) ?> </li>
+									<li class="date-icon"><i class="fa fa-calendar"></i> <?php echo date("M", strtotime($item['updated_at'])) ?> <?php echo date("d", strtotime($item['updated_at'])) ?>, <?php echo date("Y", strtotime($item['updated_at'])) ?> </li>
 								</ul>
 								<h3 class="blog-title"><a href="<?php echo base_url() . 'bao-gia/' . $item['name_unsigned'] ?>"> <?php echo $item['name'] ?> </a>
 								</h3>
 								<p class="blog-description"><?php echo $item['description'] ?></p>
-								<p class="viewlink"><a href="<?php echo base_url() . 'bao-gia/' . $item['name_unsigned'] ?>"> Xem Chi Tiết <i class="feather-arrow-right"></i></a></p>
+								<p class="viewlink"><a href="<?php echo base_url() . 'bao-gia/' . $item['name_unsigned'] ?>"> Xem Chi Tiết <i class="fa fa-arrow-right"></i></a></p>
 							</div>
 						</div>
 					</div>
@@ -135,17 +135,17 @@
 									<li>
 										<div class="post-author">
 											<div class="post-author-img">
-												<img src="<?php echo base_url() ?>assets/listee/img/profiles/avatar-14.jpg" alt="Post Author">
+												<img src="<?php echo base_url() ?>assets/frontend/img/profiles/avatar-14.jpg" alt="Post Author">
 											</div>
 											<a href="javascript:void(0);" class="mb-0"> <span> Admin </span></a>
 										</div>
 									</li>
-									<li class="date-icon"><i class="fa-solid fa-calendar-days"></i> <?php echo date("M", strtotime($item['updated_at'])) ?> <?php echo date("d", strtotime($item['updated_at'])) ?>, <?php echo date("Y", strtotime($item['updated_at'])) ?> </li>
+									<li class="date-icon"><i class="fa fa-calendar"></i> <?php echo date("M", strtotime($item['updated_at'])) ?> <?php echo date("d", strtotime($item['updated_at'])) ?>, <?php echo date("Y", strtotime($item['updated_at'])) ?> </li>
 								</ul>
 								<h3 class="blog-title"><a href="<?php echo base_url() . 'bao-gia/' . $item['name_unsigned'] ?>"> <?php echo $item['name'] ?> </a>
 								</h3>
 								<p class="blog-description"><?php echo $item['description'] ?></p>
-								<p class="viewlink"><a href="<?php echo base_url() . 'bao-gia/' . $item['name_unsigned'] ?>"> Xem Chi Tiết <i class="feather-arrow-right"></i></a></p>
+								<p class="viewlink"><a href="<?php echo base_url() . 'bao-gia/' . $item['name_unsigned'] ?>"> Xem Chi Tiết <i class="fa fa-arrow-right"></i></a></p>
 							</div>
 						</div>
 					</div>

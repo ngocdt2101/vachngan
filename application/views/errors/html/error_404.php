@@ -13,23 +13,17 @@
     ?>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="<?php echo $domain ?>assets/listee/img/story.png">
+    <link rel="shortcut icon" href="<?php echo $domain ?>assets/frontend/img/story.png">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?php echo $domain ?>assets/listee/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $domain ?>assets/frontend/css/bootstrap.min.css">
 
     <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="<?php echo $domain ?>assets/listee/plugins/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="assets/listee/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo $domain ?>assets/frontend/css/fontawesome.min.css">
+    <link rel="stylesheet" href="<?php echo $domain ?>assets/frontend/css/all.min.css">
 
     <!-- Aos CSS -->
-    <link rel="stylesheet" href="<?php echo $domain ?>assets/listee/plugins/aos/aos.css">
-
-    <!-- Fearther CSS -->
-    <link rel="stylesheet" href="<?php echo $domain ?>assets/listee/css/feather.css">
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="<?php echo $domain ?>assets/listee/css/style.css">
+    <link rel="stylesheet" href="<?php echo $domain ?>assets/frontend/css/theme.css">
 
 </head>
 
@@ -42,12 +36,12 @@
                         <div class="error-wrap">
 
                             <div class="error-logo">
-                                <a href="index.html"><img class="img-fluid" src="<?php echo $domain ?>assets/listee/img/compact_logo.png" alt="img"></a>
+                                <a href="index.html"><img class="img-fluid" src="<?php echo $domain ?>assets/frontend/img/compact_logo.png" alt="img"></a>
                             </div>
 
                             <h2>Trang bạn truy cập không tồn tại</h2>
                             <div class="error-img">
-                                <img class="img-fluid" src="<?php echo $domain ?>assets/listee/img/404-error.jpg" alt="img">
+                                <img class="img-fluid" src="<?php echo $domain ?>assets/frontend/img/404-error.jpg" alt="img">
                             </div>
                             <a href="<?php echo $domain ?>" class="btn btn-primary rounded-pill">Trở về trang chủ</a>
                         </div>
@@ -58,19 +52,13 @@
     </div>
 
     <!-- jQuery -->
-    <script src="<?php echo $domain ?>assets/listee/js/jquery-3.6.3.min.js"></script>
+    <script src="<?php echo $domain ?>assets/frontend/js/jquery.min.js"></script>
 
     <!-- Bootstrap Core JS -->
-    <script src="<?php echo $domain ?>assets/listee/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo $domain ?>assets/frontend/js/bootstrap.min.js"></script>
 
     <!-- Aos -->
-    <script src="<?php echo $domain ?>assets/listee/plugins/aos/aos.js"></script>
-
-    <!-- Fearther JS -->
-    <script src="<?php echo $domain ?>assets/listee/js/feather.min.js"></script>
-
-    <!-- Custom JS -->
-    <script src="<?php echo $domain ?>assets/listee/js/script.js"></script>
+    <script src="<?php echo $domain ?>assets/frontend/js/jquery.fancybox.min.js"></script>
 
 </body>
 

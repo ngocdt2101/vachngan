@@ -8,7 +8,7 @@
 	<meta name="robots" content="noindex">
 	<meta name="description" content="Admin System" />
 	<meta name="author" content="Ngoc Developer" />
-	<link rel="shortcut icon" type="image/png" href="<?php echo base_url() ?>assets/listee/img/story.png">
+	<link rel="shortcut icon" type="image/png" href="<?php echo base_url() ?>assets/frontend/img/story.png">
 	<title><?php echo isset($title) ? $title : 'Admin System' ?></title>
 
 	<link rel="stylesheet" href="<?php echo base_url() ?>assets/neon/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">

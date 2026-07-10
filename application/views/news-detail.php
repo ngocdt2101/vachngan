@@ -33,7 +33,7 @@
 					</div>
 
 					<!-- Categories -->
-					<h6><img src="<?php echo base_url() ?>assets/listee/img/details-icon.svg" alt="details-icon"> Danh mục</h6>
+					<h6><img src="<?php echo base_url() ?>assets/frontend/img/details-icon.svg" alt="details-icon"> Danh mục</h6>
 					<div class="checkbox checkbox-primary">
 						<ul>
 							<li> <a href="<?php echo base_url() . 'danh-muc-bao-gia/bao-gia-tam-compact' ?>"> Báo giá tấm Compact </a> </li>
@@ -43,7 +43,7 @@
 					</div>
 
 					<!-- Recent Posts -->
-					<h6><img src="<?php echo base_url() ?>assets/listee/img/category-icon.svg" alt="details-icon"> Báo giá liên quan</h6>
+					<h6><img src="<?php echo base_url() ?>assets/frontend/img/category-icon.svg" alt="details-icon"> Báo giá liên quan</h6>
 					<div class="recent-post">
 						<?php foreach ($related_news as $index => $item) { ?>
 							<div class="media">

@@ -26,15 +26,15 @@
   			<div class="row">
   				<div class="col-lg-9">
   					<ul>
-  						<li><a href="javascript:void(0);"><i class="feather-share-2"></i> Chia sẻ</a></li>
-  						<li><a href="javascript:void(0);"><i class="fa-regular fa-comment-dots"></i> Đánh giá</a></li>
-  						<li><a href="javascript:void(0);"><i class="feather-flag"></i>Báo cáo </a></li>
-  						<li><a href="javascript:void(0);"><i class="feather-heart"></i> Lưu</a></li>
+						<li><a href="javascript:void(0);"><i class="fa fa-share-alt"></i> Chia sẻ</a></li>
+						<li><a href="javascript:void(0);"><i class="fa fa-comment"></i> Đánh giá</a></li>
+						<li><a href="javascript:void(0);"><i class="fa fa-flag"></i>Báo cáo </a></li>
+						<li><a href="javascript:void(0);"><i class="fa fa-heart"></i> Lưu</a></li>
   					</ul>
   				</div>
   				<div class="col-lg-3">
   					<div class="callnow">
-  						<a href="tel:<?php echo $company['hotline'] ?>"> <i class="feather-phone-call"></i> Call Now</a>
+						<a href="tel:<?php echo $company['hotline'] ?>"> <i class="fa fa-phone"></i> Call Now</a>
   					</div>
   				</div>
   			</div>
@@ -65,7 +65,7 @@
   				<!--Gallery Section-->
   				<div class="card gallery-section ">
   					<div class="card-header ">
-  						<img src="<?php echo base_url() ?>assets/listee/img/galleryicon.svg" alt="gallery">
+						<img src="<?php echo base_url() ?>assets/frontend/img/galleryicon.svg" alt="gallery">
   						<h4>Hình ảnh thực tế</h4>
   					</div>
   					<div class="card-body">
@@ -100,7 +100,7 @@
   				<!-- Related  Section-->
   				<div class="card related-sec  mb-0">
   					<div class="card-header  align-items-center">
-  						<img src="<?php echo base_url() ?>assets/listee/img/icons/icons-11.png" alt="gallery">
+						<img src="<?php echo base_url() ?>assets/frontend/img/icons/icons-11.png" alt="gallery">
   						<h4>Sản phẩm liên quan</h4>
   					</div>
   					<div class="card-body latestad-section grid-view featured-slider" style="background: white;">
@@ -120,7 +120,7 @@
   														<div class="card-body" style="padding: 15px;">
   															<div class="blogfeaturelink" style="margin: 0px 0 15px 0;">
   																<div class="blog-features">
-  																	<a href="javascript:void(0)"><span> <i class="fa-regular fa-circle-stop"></i> <?php echo $item['category_name'] ?> </span></a>
+																	<a href="javascript:void(0)"><span> <i class="fa fa-circle"></i> <?php echo $item['category_name'] ?> </span></a>
   																</div>
   															</div>
   															<h6 style="white-space: wrap;"><a href="<?php echo base_url() . 'san-pham/' . $item['name_unsigned'] ?>"><?php echo $item['name'] ?></a></h6>
@@ -146,7 +146,7 @@
   			<div class="col-lg-3 theiaStickySidebar">
   				<div class="rightsidebar">
   					<div class="card">
-  						<h4><img src="<?php echo base_url() ?>assets/listee/img/details-icon.svg" alt="details-icon"> Thông tin sản phẩm</h4>
+						<h4><img src="<?php echo base_url() ?>assets/frontend/img/details-icon.svg" alt="details-icon"> Thông tin sản phẩm</h4>
   						<ul>
   							<li>Giá
   								<span style="color: #c10037; font-size: 20px;">
@@ -164,13 +164,13 @@
   						</ul>
   					</div>
   					<div class="card">
-  						<h4><img src="<?php echo base_url() ?>assets/listee/img/breifcase.svg" alt=""> Thông tin liên hệ</h4>
+						<h4><img src="<?php echo base_url() ?>assets/frontend/img/breifcase.svg" alt=""> Thông tin liên hệ</h4>
   						<div class="map-details">
   							<ul class="info-list">
-  								<li><i class="feather-map-pin"></i> <?php echo $company['address'] ?></li>
-  								<li><i class="feather-phone-call"></i> <?php echo $company['hotline'] ?></li>
-  								<li><i class="feather-mail"></i> <?php echo $company['email'] ?></li>
-  								<li><img src="<?php echo base_url() ?>assets/listee/img/website.svg" alt="website"> <?php echo $_SERVER['HTTP_HOST'] ?></li>
+								<li><i class="fa fa-map-marker"></i> <?php echo $company['address'] ?></li>
+								<li><i class="fa fa-phone"></i> <?php echo $company['hotline'] ?></li>
+								<li><i class="fa fa-envelope"></i> <?php echo $company['email'] ?></li>
+								<li><img src="<?php echo base_url() ?>assets/frontend/img/website.svg" alt="website"> <?php echo $_SERVER['HTTP_HOST'] ?></li>
   								<li class="socialicons pb-0">
   									<a href="javascript:void(0)"><i class="fab fa-facebook-f"></i> </a>
   									<a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
@@ -181,7 +181,7 @@
   						</div>
   					</div>
   					<div class="card mb-0">
-  						<h4> <i class="feather-phone-call"></i> Đăng kí </h4>
+						<h4> <i class="fa fa-phone"></i> Đăng kí </h4>
   						<form class="contactbusinessform">
   							<div class="form-group">
   								<input type="text" class="form-control" placeholder="Name">

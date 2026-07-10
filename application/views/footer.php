@@ -1,5 +1,5 @@
   <!-- Footer -->
-  <footer class="footer-dark">
+	<footer class="footer-dark site-footer">
   	<div class="container">
 
   		<!-- Newslatter -->
@@ -80,7 +80,7 @@
   </footer>
 
   <!-- Rights -->
-  <div class="rights dark">
+	<div class="rights dark site-rights">
   	<div class="container">
   		<div class="row">
   			<div class="col-sm-6">
