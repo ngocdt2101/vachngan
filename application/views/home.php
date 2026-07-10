@@ -77,7 +77,7 @@
 
         <!-- heading -->
         <div class="section-heading">
-          <span>Bộ giải pháp nổi bật</span>
+          <span>Báo giá mới nhất</span>
           <h2>Báo giá tấm Compact</h2>
           <p>Khám phá các dòng báo giá cập nhật và lựa chọn phù hợp theo quy mô công trình.</p>
           <hr>
@@ -107,7 +107,7 @@
 
         <!-- heading -->
         <div class="section-heading">
-          <span>Bộ giải pháp nổi bật</span>
+          <span>Báo giá mới nhất</span>
           <h2>Báo giá vách ngăn vệ sinh</h2>
           <p>Những cấu hình tối ưu cho khu vệ sinh công cộng, bền đẹp và dễ bảo trì.</p>
           <hr>
@@ -136,7 +136,7 @@
 
         <!-- heading -->
         <div class="section-heading">
-          <span>Bộ giải pháp nổi bật</span>
+          <span>Báo giá mới nhất</span>
           <h2>Báo giá vách ngăn di động</h2>
           <p>Giải pháp không gian linh hoạt cho phòng họp, hội trường và khu chức năng.</p>
           <hr>

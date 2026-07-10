@@ -425,7 +425,7 @@ a:focus {
 }
 
 .btn.btn-hero {
-	padding: 14px 22px;
+	padding: 14px 22px 10px 22px;
 	border-radius: 14px;
 	background: linear-gradient(135deg, var(--vc-accent), #ff9f2d);
 	border: none;
