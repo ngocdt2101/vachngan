@@ -27,6 +27,7 @@ class Frontend_Controller extends CI_Controller
 		$this->load->model("post_model");
 		$this->load->model("image_model");
 		$this->load->model("product_model");
+		$this->VisiterCouter();
 		$this->BuildCommonData();
 	}
 
