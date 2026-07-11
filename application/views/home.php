@@ -15,7 +15,7 @@
             <div class="feature-card">
               <div class="feature-card__icon hexagon">
                 <?php if (!empty($banner['link'])): ?>
-                  <a href="<?php echo base_url() . $banner['link']; ?>" class="hexagon__link" target="_blank">
+                  <a href="<?php echo base_url() . $banner['link']; ?>" class="hexagon__link">
                 <?php endif; ?>
                 
                 <?php if (!empty($banner['thumb'])): ?>
