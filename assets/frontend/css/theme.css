@@ -767,7 +767,7 @@ a:focus {
 .blog-post article,
 .product article {
 	background: linear-gradient(135deg, #ffffff, #f9fbfd);
-	border-radius: 22px;
+	border-radius: 10px;
 	border: 1px solid var(--vc-border);
 	box-shadow: 0 4px 12px rgba(43, 108, 176, 0.06), 0 2px 4px rgba(0, 0, 0, 0.04);
 	overflow: hidden;
@@ -825,7 +825,7 @@ a:focus {
 .product article .tittle {
 	display: block;
 	font-size: 16px;
-	font-weight: 700;
+	font-weight: 600;
 	line-height: 1.5;
 	padding: 0 18px;
 	margin-top: 16px;
@@ -917,14 +917,12 @@ a:focus {
 }
 
 .product article .tag {
-	margin-top: 16px;
-	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-	color: var(--vc-primary);
-	font-size: 11px;
-	opacity: 0.8;
-	transition: opacity 0.3s;
+    margin-top: 16px;
+    font-weight: 500;
+    color: #8c8b8b;
+    font-size: 11px;
+    opacity: 1;
+    transition: opacity 0.3s;
 }
 
 .product:hover article .tag {
@@ -2189,6 +2187,7 @@ a:focus {
 	display: flex;
 	align-items: center;
 	margin-right: 8px;
+	text-transform: uppercase;
 }
 
 .nav-tabs>li>a::after {
