@@ -14,7 +14,7 @@
 	<meta property="og:type" content="<?php echo isset($meta_og['type']) ? $meta_og['type'] : 'article' ?>">
 	<meta property="og:title" content="<?php echo isset($meta_og['title']) ? $meta_og['title'] : $company['meta_keyword'] ?>">
 	<meta property="og:description" content="<?php echo isset($meta_og['description']) ? $meta_og['description'] : $company['meta_description'] ?>">
-	<meta property="og:image" content="<?php echo isset($meta_og['image']) ? $meta_og['image'] : base_url() . 'assets/frontend/img/compact_logo.png' ?>">
+	<meta property="og:image" content="<?php echo isset($meta_og['image']) ? $meta_og['image'] : base_url() . 'assets/frontend/img/compact_logo2.svg' ?>">
 
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="<?php echo base_url() ?>assets/frontend/img/favicon.svg" type="image/x-icon">
