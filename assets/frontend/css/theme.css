@@ -240,7 +240,7 @@ a:focus {
 	align-items: flex-start;
 	padding: 10px 16px;
 	border-radius: 18px;
-	background: linear-gradient(135deg, var(--vc-primary), #35a07f);
+	background: linear-gradient(135deg, #da0000, #ff0000);
 	color: #fff !important;
 	box-shadow: 0 16px 28px rgba(53, 160, 127, 0.22);
 	min-width: 180px;
@@ -334,7 +334,7 @@ a:focus {
 }
 
 .site-header__hotline span {
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.08em;
@@ -641,7 +641,7 @@ a:focus {
 .section-heading h2 {
 	margin: 0 0 10px;
 	font-size: clamp(26px, 3vw, 38px);
-	color: var(--vc-ink);
+	color: #e82f00;
 }
 
 .section-heading p {
@@ -2271,7 +2271,7 @@ a:focus {
 
 .phone-call {
 	bottom: 90px;
-	background: linear-gradient(135deg, var(--vc-accent), #ff9e3c);
+	background: linear-gradient(135deg, #ff0000, #ff9e3c);
 }
 
 .phone-call img {
@@ -2325,7 +2325,7 @@ a:focus {
 }
 
 .phone-call::before {
-	color: var(--vc-accent);
+	color: #f90000;;
 }
 
 .zalo-chat::before {
