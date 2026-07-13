@@ -2177,7 +2177,7 @@ a:focus {
 .nav-tabs>li>a {
 	color: #999;
 	font-weight: 600;
-	font-size: 16px;
+	font-size: 20px;
 	padding: 0 10px;
 	border: none;
 	background-color: transparent;
@@ -2215,7 +2215,7 @@ a:focus {
 
 .nav-tabs>li.active>a,
 .nav-tabs>li.active>a:hover {
-	color: var(--vc-primary);
+	color: #ea0a03;
 	background-color: transparent;
 	font-weight: 600;
 	text-decoration: none;
@@ -2265,7 +2265,7 @@ a:focus {
 	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 	transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 	cursor: pointer;
-	animation: floatBounce 1.05s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+	animation: floatBounce 2.8s ease-in-out infinite;
 	text-decoration: none;
 }
 
@@ -2275,7 +2275,7 @@ a:focus {
 }
 
 .phone-call img {
-	width: 28px;
+	width: 40px;
 	height: auto;
 	filter: brightness(0) invert(1);
 }
@@ -2334,51 +2334,79 @@ a:focus {
 
 @keyframes floatBounce {
 	0% {
-		transform: translateY(0) rotate(0deg) scale(1);
+		transform: rotate(0deg);
 	}
 
-	8% {
-		transform: translateY(-4px) rotate(-16deg) scale(1.04);
+	3% {
+		transform: rotate(-16deg);
 	}
 
-	16% {
-		transform: translateY(2px) rotate(14deg) scale(0.98);
+	6% {
+		transform: rotate(14deg);
 	}
 
-	24% {
-		transform: translateY(-5px) rotate(-18deg) scale(1.03);
+	9% {
+		transform: rotate(-12deg);
 	}
 
-	32% {
-		transform: translateY(3px) rotate(16deg) scale(0.99);
+	12% {
+		transform: rotate(10deg);
 	}
 
-	40% {
-		transform: translateY(-4px) rotate(-12deg) scale(1.02);
+	15% {
+		transform: rotate(0deg);
 	}
 
-	48% {
-		transform: translateY(2px) rotate(10deg) scale(1);
+	35% {
+		transform: rotate(0deg);
 	}
 
-	56% {
-		transform: translateY(-3px) rotate(-8deg) scale(1.01);
+	38% {
+		transform: rotate(-16deg);
 	}
 
-	64% {
-		transform: translateY(2px) rotate(7deg) scale(1);
+	41% {
+		transform: rotate(14deg);
 	}
 
-	72% {
-		transform: translateY(-2px) rotate(-5deg) scale(1.01);
+	44% {
+		transform: rotate(-12deg);
 	}
 
-	80% {
-		transform: translateY(1px) rotate(4deg) scale(1);
+	47% {
+		transform: rotate(10deg);
+	}
+
+	50% {
+		transform: rotate(0deg);
+	}
+
+	70% {
+		transform: rotate(0deg);
+	}
+
+	73% {
+		transform: rotate(-16deg);
+	}
+
+	76% {
+		transform: rotate(14deg);
+	}
+
+	79% {
+		transform: rotate(-12deg);
+	}
+
+	82% {
+		transform: rotate(10deg);
+	}
+
+	85% {
+		transform: rotate(0deg);
 	}
 
 	100% {
-		transform: translateY(0) rotate(0deg) scale(1);
+		transform: rotate(0deg);
 	}
 }
 
