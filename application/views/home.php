@@ -183,6 +183,8 @@
           }
           $grouped_products[$category][] = $item;
         }
+
+        krsort($grouped_products, SORT_NATURAL | SORT_FLAG_CASE);
         
         $categories = array_keys($grouped_products);
       ?>
