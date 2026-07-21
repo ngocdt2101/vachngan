@@ -18,7 +18,7 @@ $slideList = (is_array($slides) && !empty($slides)) ? $slides : [];
             <h1>CHUYÊN GIA THI CÔNG VÁCH NGĂN VỆ SINH COMPACT</h1>
             <p>Giải pháp bền bỉ, thẩm mỹ cao, chịu nước 100% cho mọi công trình.</p>
             <div class="hero-main__actions">
-              <a class="btn btn-hero" href="<?php echo base_url() . 'lien-he' ?>">NHẬN BÁO GIÁ TRỌN GÓI</a>
+              <a class="btn btn-hero" href="<?php echo base_url() . 'bao-gia' ?>">NHẬN BÁO GIÁ TRỌN GÓI</a>
               <a class="btn btn-hero btn-hero--ghost" href="<?php echo base_url() . 'gioi-thieu' ?>">XEM NĂNG LỰC</a>
             </div>
           </div>

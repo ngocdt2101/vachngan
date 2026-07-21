@@ -25,7 +25,7 @@
 	<link rel="stylesheet" href="<?php echo base_url() ?>assets/frontend/css/fontawesome.min.css">
 	<link rel="stylesheet" href="<?php echo base_url() ?>assets/frontend/css/all.min.css">
 	<link rel="stylesheet" href="<?php echo base_url() ?>assets/frontend/css/jquery.fancybox.min.css">
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/frontend/css/theme.css?v=1.2">
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/frontend/css/theme.css?v=1.3">
 
 
 	<!-- Google Analytics -->

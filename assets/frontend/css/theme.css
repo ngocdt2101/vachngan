@@ -426,13 +426,13 @@ a:focus {
 }
 
 .btn.btn-hero {
-	padding: 14px 22px 10px 22px;
-	border-radius: 14px;
-	background: linear-gradient(135deg, var(--vc-accent), #ff9f2d);
-	border: none;
-	color: #fff;
-	font-weight: 800;
-	box-shadow: 0 16px 28px rgba(242, 138, 26, 0.28);
+	padding: 12px 22px 10px 22px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--vc-accent), #ff9f2d);
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 16px 28px rgba(242, 138, 26, 0.28);
 }
 
 .btn.btn-hero--ghost {
