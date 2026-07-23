@@ -36,22 +36,21 @@ class Quotation_Model extends CI_Model
 
 		if ($params) {
 			$this->db->where($params);
-			$this->db->where("type = 'quotation' or type = 'quotation2' or type = 'quotation3'");
+			$this->db->where_in('type', array('quotation', 'quotation2', 'quotation3'));
 		}
 
 		$this->db->limit(1);
 
 		$result = $this->db->get()->result_array();
 
-		if (isset($result)){
+		if (!empty($result)) {
 			unset($params);
 			$params['id'] = $result[0]["id"];
 			$params['view_count'] = $result[0]["view_count"] + 1;
 			$this->db->where('id', $params["id"]);
 			$this->db->update("post", $params);
 			return $result;
-		}
-		else {
+		} else {
 			return null;
 		}
 	}

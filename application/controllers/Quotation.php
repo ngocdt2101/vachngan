@@ -99,6 +99,7 @@ class Quotation extends Frontend_Controller
 		$data = $this->data;
 
 		// Get Quotation
+		unset($params);
 		$params['is_enable'] = 1;
 		$params['name_unsigned'] = $name_unsigned;
 		$result = $this->quotation_model->GetDetail($params);
@@ -107,6 +108,7 @@ class Quotation extends Frontend_Controller
 			show_404();
 		} else {
 			$quotation = $result[0];
+			$data['name_unsigned'] = $name_unsigned;
 			$data['quotation'] = $quotation;
 			$data['tags'] = array_filter(explode(',', $quotation['tags']));
 

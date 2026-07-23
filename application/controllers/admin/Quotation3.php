@@ -3,6 +3,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Quotation3 extends Admin_Controller
 {
+	private function generate_name_unsigned($name)
+	{
+		return create_slug($name);
+	}
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -32,7 +37,7 @@ class Quotation3 extends Admin_Controller
 
 		if ($post_data) {
 			$post['name'] = $post_data['name'];
-			$post['name_unsigned'] = $post_data['name_unsigned'];
+			$post['name_unsigned'] = $this->generate_name_unsigned($post_data['name']);
 			$post['description'] = $post_data['description'];
 			$post['content'] = $post_data['content'];
 			$post['type'] = 'quotation3';
@@ -78,7 +83,7 @@ class Quotation3 extends Admin_Controller
 		if ($post_data) {
 			$post['id'] = $post_data['id'];
 			$post['name'] = $post_data['name'];
-			$post['name_unsigned'] = $post_data['name_unsigned'];
+			$post['name_unsigned'] = $this->generate_name_unsigned($post_data['name']);
 			$post['description'] = $post_data['description'];
 			$post['content'] = $post_data['content'];
 			$post['type'] = 'quotation3';
