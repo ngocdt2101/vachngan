@@ -128,6 +128,7 @@ if (!function_exists('create_slug')) {
 		);
 		$string = preg_replace($search, $replace, $string);
 		$string = preg_replace('/(-)+/', '-', $string);
+		$string = trim($string, '-');
 		$string = preg_replace('/[^\x20-\x7E]/', '', $string);
 		$string = strtolower($string);
 		return $string;
