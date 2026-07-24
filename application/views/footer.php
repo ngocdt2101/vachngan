@@ -7,12 +7,15 @@
   			<!-- Contact -->
   			<div class="col-md-5">
   				<h4>CÔNG TY TNHH XNK & THƯƠNG MẠI BA MIỀN</h4>
-  				<p>Địa chỉ: Số 256/16D, Khu Phố 2, phường Thạnh Xuân, Q.12, TP.HCM</p>
-  				<p>Xưởng sản xuất HCM: 280/112 Ấp 2 Đông Thạnh, Hóc Môn, Tp.HCM</p>
+  				<p>Địa chỉ: Số 256/16D, Đường TX25, P.Thới An, TP.HCM</p>
+  				<p>Xưởng sản xuất HCM: 280/112 Ấp 2, Đông Thạnh, Hóc Môn, Tp.HCM</p>
   				<p>Xưởng sản xuất Đà Nẵng: Số 16 Hoàng Văn Thái, Liên Chiểu, Đà Nẵng</p>
-  				<p>Xưởng sản xuất Hà Nội: Số 158, đường Phan Trọng Tuệ, xã Thanh Liệt, huyện Thanh Trì, Hà Nội</p>
-  				<p>Phone: 0927 680 999 <br> 0909 256 236 <br> 0909 224 979 <br> 0983 670 779</p>
-  				<p>Email: vachnganbamien@gmail.com</p>
+  				<p>Xưởng sản xuất Hà Nội: KM01, đường Phan Trọng Tuệ, xã Đại Thanh, TP HN</p>
+  				<p>Phone: 0927 680 999 <br>
+				 0909 256 236 &nbsp;&nbsp; - &nbsp;&nbsp; 0326 025 871 <br>
+				 0909 224 979 &nbsp;&nbsp; - &nbsp;&nbsp; 0979 138 618<br>
+				 0983 670 779</p>
+  				<p>Email: compactbamienchaogia@gmail.com</p>
   			</div>
 
   			<!-- Categories -->
