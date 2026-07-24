@@ -4,8 +4,8 @@
   <section class="home-intro-shell">
     <div class="container">
       <div class="section-heading section-heading--compact text-center">
-        <h2>DỰ ÁN ĐÃ THI CÔNG</h2>
-        <p>Thi công nhanh, đồng bộ phụ kiện, bảo hành rõ ràng và tối ưu chi phí cho công trình.</p>
+        <h2>GIỚI THIỆU BA MIỀN</h2>
+        <p>Hơn 15 năm kinh nghiệm trong lĩnh vực vách ngăn vệ sinh Compact, Ba Miền mang đến giải pháp thi công chất lượng, tiến độ nhanh và chi phí tối ưu cho mọi công trình </p>
         <hr>
       </div>
 
@@ -78,8 +78,8 @@
         <!-- heading -->
         <div class="section-heading">
           <span>Báo giá mới nhất</span>
-          <h2>Báo giá tấm Compact</h2>
-          <p>Khám phá các dòng báo giá cập nhật và lựa chọn phù hợp theo quy mô công trình.</p>
+          <h2>DANH MỤC SẢN PHẨM</h2>
+          <p>Cung cấp đầy đủ vật tư phụ kiện và giải pháp thi công vách ngăn vệ sinh chất lượng cao, phù hợp với mọi quy mô công trình.</p>
           <hr>
         </div>
         <div id="blog-slide" class="with-nav">
@@ -109,7 +109,7 @@
         <div class="section-heading">
           <span>Báo giá mới nhất</span>
           <h2>Báo giá vách ngăn vệ sinh</h2>
-          <p>Những cấu hình tối ưu cho khu vệ sinh công cộng, bền đẹp và dễ bảo trì.</p>
+          <p>Đa dạng giải pháp vật tư và thi công vách ngăn vệ sinh, đáp ứng mọi nhu cầu từ công trình nhỏ đến dự án lớn</p>
           <hr>
         </div>
         <div id="blog-slide-a" class="with-nav">
@@ -166,9 +166,9 @@
 
       <!-- Nav tabs -->
       <div class="section-heading">
-        <span>Danh mục sản phẩm</span>
-        <h2>Sản phẩm</h2>
-        <p>Tập trung vào các dòng sản phẩm chủ lực cho công trình vệ sinh và nội thất kỹ thuật.</p>
+        <span>Công trình</span>
+        <h2>MỘT SỐ CÔNG TRÌNH TIÊU BIỂU</h2>
+        <p>Mỗi công trình hoàn thiện là minh chứng cho chất lượng sản phẩm, kỹ thuật thi công và sự đồng hành bền vững của Ba Miền</p>
         <hr>
       </div>
 
